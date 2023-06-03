@@ -1,0 +1,101 @@
+@use 'abstract' as *;
+
+.projects {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+        'project1'
+        'project2'
+        'project3'
+        'project4'
+        'project5';
+
+    .project {
+        position: relative;
+        overflow: hidden;
+        border-radius: rem(5);
+        min-height: rem(300);
+        background-color: $dark-gray;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+
+
+        &:nth-child(1) {
+            grid-area: project1;
+            background-image: url(../assets/images/projects/project1.jpg);
+        }
+
+        &:nth-child(2) {
+            grid-area: project2;
+            background-image: url(../assets/images/projects/project2.jpg);
+        }
+
+        &:nth-child(3) {
+            grid-area: project3;
+            background-image: url(../assets/images/projects/project3.jpg);
+        }
+
+        &:nth-child(4) {
+            grid-area: project4;
+            background-image: url(../assets/images/projects/project4.jpg);
+        }
+
+        &:nth-child(5) {
+            grid-area: project5;
+            background-image: url(../assets/images/projects/project5.jpg);
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            inset: 0;
+            background: inherit;
+            transform-origin: center;
+            transition: transform .5s ease-in-out;
+        }
+
+        &:hover {
+            &::after {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+
+            .project__details {
+                background-color: rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        .project__details {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            color: $white;
+            padding: rem(20);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+
+
+
+
+    @include breakpoints-up("md") {
+        grid-template-areas:
+            'project1 project1'
+            'project2 project5'
+            'project3 project5'
+            'project4 project4';
+    }
+
+    @include breakpoints-up("lg") {
+        grid-template-areas:
+            'project1 project1 project1 project2 project2 project5 project5'
+            'project3 project3 project4 project4 project4 project5 project5';
+    }
+
+
+}

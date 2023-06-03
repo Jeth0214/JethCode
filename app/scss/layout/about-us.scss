@@ -1,0 +1,13 @@
+@use 'abstract' as *;
+
+.about-us {
+
+    .about-us__details {
+
+        text-align: center;
+
+        @include breakpoints-up("md") {
+            text-align: left;
+        }
+    }
+}

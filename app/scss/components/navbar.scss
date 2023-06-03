@@ -1,0 +1,192 @@
+@use 'abstract' as *;
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .nav__brand {
+        .nav__brand-image {
+            height: rem(35);
+
+            @include breakpoints-up("md") {
+                height: rem(40);
+            }
+        }
+
+        .nav__brand-name {
+            font-weight: bold;
+            font-size: rem(18);
+            color: lighten($primary, 10%);
+
+            @include breakpoints-up("md") {
+                font-size: rem(24);
+            }
+        }
+
+    }
+
+
+    .nav__toggle {
+        cursor: pointer;
+        height: rem(24);
+        width: rem(24);
+        position: relative;
+        transition: background-color 1s ease-in-out;
+
+        &:hover {
+            .nav__burger-line {
+                background-color: $white;
+            }
+        }
+
+        .nav__burger-line {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: rem(2.4);
+            border-radius: rem(5);
+            background-color: $primary;
+            transition: transform 0.5s, width 0.5s;
+        }
+
+        .nav__burger-line--1 {
+            transform: translate(-50%, -7px);
+        }
+
+        .nav__burger-line--2 {
+            width: 100%;
+        }
+
+        .nav__burger-line--3 {
+            transform: translate(-50%, 5px);
+        }
+
+    }
+
+    .nav__links {
+        visibility: hidden;
+        height: 0;
+        position: absolute;
+
+        @include breakpoints-up("md") {
+            visibility: visible;
+            height: auto;
+            position: relative;
+        }
+
+        .nav__link {
+            position: relative;
+            transition: all 0.2s ease-in-out;
+            letter-spacing: 2px;
+
+            &:hover {
+                color: $primary;
+            }
+
+
+            &:not(:last-child) {
+                margin-bottom: rem(20);
+
+                @include breakpoints-up("md") {
+                    margin-right: rem(10);
+                }
+
+                @include breakpoints-up("lg") {
+                    margin-right: rem(20);
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: rem(3);
+                background-color: $primary;
+                top: rem(24);
+                opacity: 0;
+                transition: all .2s ease-in-out;
+
+                @include breakpoints-up("md") {
+                    top: rem(35);
+                }
+
+                @include breakpoints-up("lg") {
+                    top: rem(39);
+                }
+            }
+        }
+
+        .nav__link--active {
+            color: $primary;
+            font-weight: bold;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+
+
+    }
+
+    .nav__cta {
+        letter-spacing: 1.5px;
+    }
+
+
+}
+
+// for mobile open menu 
+.nav--open-menu {
+    padding: 20px 0;
+
+    .nav__toggle {
+
+        .nav__burger-line--1 {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        .nav__burger-line--2 {
+            width: 0;
+        }
+
+        .nav__burger-line--3 {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+
+    .nav__links {
+        visibility: visible;
+        height: auto;
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        top: rem(80);
+        background-color: $dark;
+        padding: rem(20);
+        border-radius: 5px;
+        width: rem(250);
+        align-items: center;
+        z-index: 3;
+        animation: opac .5s linear;
+    }
+}
+
+// style nav brand on scroll
+.nav__brand--shrink {
+    .nav__brand {
+
+        .nav__brand-image {
+            height: rem(30);
+        }
+
+        .nav__brand-name {
+            font-size: rem(16);
+        }
+    }
+}

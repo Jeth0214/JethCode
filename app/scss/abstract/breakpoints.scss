@@ -1,0 +1,37 @@
+// https://github.com/thecodercoder/fem-dklt-toggle
+
+// 700px, 1150px, 1400px
+$breakpoints-up: (
+    'medium': '48em',
+    'large': '71.875em',
+    'xlarge': '87.5em',
+);
+
+// 699px, 1149px, 1399px
+$breakpoints-down: (
+    'small': '47.9375em',
+    'medium': '71.8125em',
+    'large': '87.4375em',
+);
+
+$breakpoints: (
+    "xs": 0rem,
+    "sm": 36rem,
+    "md": 48rem,
+    "lg": 62rem,
+    "xl": 200rem,
+);
+
+
+
+@mixin breakpoints-up($size) {
+    @media(min-width: map-get($breakpoints, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoints-down($size) {
+    @media(max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}

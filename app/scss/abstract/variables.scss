@@ -1,0 +1,64 @@
+// Variables
+
+/** Colors  */
+$primary: #32cd32 !default;
+$secondary: #22cccc !default;
+$error: #f42f2f !default;
+$dark-gray: #5E5C47 !default;
+$dark: #1E1B1C !default;
+$light: #EDEEE8 !default;
+$black: #000000 !default;
+$white: #FFFFFF !default;
+//$primary: #bbeebb !default;
+/** Font Family  */
+$ff-sans-serif: 'Poppins', sans-serif;
+
+$colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "error": $error,
+    "dark-gray": $dark-gray,
+    "dark": $dark,
+    "light": $light,
+    "black": $black,
+    "white": $white,
+    ) !default;
+
+/** Font Sizes  */
+$fs-h1: 4rem !default;
+;
+$fs-h2: 2rem !default;
+;
+$fs-h3: 1.3rem !default;
+;
+$fs-h4: 1.2rem !default;
+;
+$fs-h5: 1.1rem !default;
+;
+$fs-base: 1rem !default;
+;
+
+/** Line height  */
+$lh-base: 1.5 !default;
+;
+$lh-small: 1.25 !default;
+;
+$lh-large: 2 !default;
+;
+
+/** bases  */
+
+//spacing
+$base-padding: .5em !default;
+;
+$base-margin: .5rem !default;
+;
+
+// borders
+$base-border-thickness: 1px !default;
+;
+$base-border-radius: 10px !default;
+;
+
+// box shadows
+$base-box-shadows: 1px 3px 5px rgba(0, 0, 0, 0.1) !default;

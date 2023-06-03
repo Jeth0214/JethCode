@@ -1,0 +1,72 @@
+@use "sass:math";
+@use "abstract" as *;
+
+
+.hide-for-mobile {
+    display: none;
+
+    @include breakpoints-up("md") {
+        display: block;
+    }
+}
+
+.hide-for-desktop {
+    display: block;
+
+    @include breakpoints-up("md") {
+        display: none;
+    }
+}
+
+.hide-for-medium {
+    display: none;
+
+    @include breakpoints-up("lg") {
+        display: block;
+    }
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+// some global animations {
+.fade-in {
+    animation: fade-in 500ms ease-in forwards;
+}
+
+.fade-out {
+    animation: fade-out 300ms ease-out forwards;
+}
+
+//
+.box-shadow {
+    box-shadow: $base-box-shadows;
+}
+
+
+// sections
+
+.section {
+    padding: rem(48) 0;
+    margin: rem(20) 0;
+}
+
+// border line in sections
+.border-line {
+    position: relative;
+
+    @include breakpoints-up("md") {
+
+        &::before {
+            content: "";
+            background-color: $primary;
+            bottom: 0;
+            height: 92%;
+            position: absolute;
+            right: -20%;
+            transform: translatey(-4%);
+            width: 4px;
+        }
+    }
+}
