@@ -27,7 +27,7 @@
 
 <body>
     <!-- Header -->
-    <header class="header" id="header">
+    <header class="header display-n" id="header">
         <div id="overlay"></div>
         <nav class="nav container pt-2 pb-2">
             <!-- Nav Brand -->
@@ -38,23 +38,6 @@
                     <span class="nav__brand-name ">WeConstruct</span>
                 </a>
             </div>
-
-            <!-- Nav Hamburger Menu -->
-            <div id="nav__toggle" class="nav__toggle hide-for-desktop">
-                <span class="nav__burger-line nav__burger-line--1"></span>
-                <span class="nav__burger-line nav__burger-line--2"></span>
-                <span class="nav__burger-line nav__burger-line--3"></span>
-            </div>
-
-            <!-- Nav Links -->
-            <div class="nav__links hide-for-mobile">
-                <a href="#about-us" class="nav__link text-white fw-bold">About Us</a>
-                <a href="#services" class="nav__link text-white fw-bold">Services</a>
-                <a href="#projects" class="nav__link text-white fw-bold">Projects</a>
-                <a href="#testimonies" class="nav__link text-white fw-bold">Testimonies</a>
-                <a href="#blog" class="nav__link text-white fw-bold">Blog</a>
-            </div>
-
             <!--  Cta Button-->
             <a href="#contact-us" class="btn-primary text-white nav__cta hide-for-medium"> Get a Quote </a>
         </nav>
@@ -62,36 +45,29 @@
     <!-- End of Header -->
     <!-- Main Section -->
     <main class="main">
-        <!--  Sticky scroll to the button  -->
-        <button onClick="scrollToTop()" class="fab-button br-full text-primary border-primary position-fixed">
-            <span class="sr-only">Button to scroll to the top</span>
-            <i class="fa-solid fa-chevron-up"></i>
-        </button>
 
         <!-- Hero Section -->
         <section class="hero ">
-            <div class="container" style="height: 100%;">
+            <div class="container">
                 <div class="hero__text text-light">
-                    <h1 class="hero__title h1"> <span class="text-primary">WeConstruct</span>
-                        Constructing Solutions</h1>
-                    <div class="hero__description h4 mt-2 mb-2">
-                        <p>We always prioritize the maximum possible result with modern methods and the latest
-                            technology.</p>
-                        <p class="mt-2">We <span class="text-primary fw-700 fade-in">Build</span>. We
-                            <span class="text-primary fw-700 fade-in">Modify</span>. We <span
-                                class="text-primary fw-700 fade-in">Develop</span>.
-                        </p>
-                    </div>
-                    <a href="#contact-us" class="btn display-i-b btn-primary h4 text-white">
-                        Get a Quote
-                    </a>
+                    <section class="hero ">
+                        <div class="container">
+                            <div class="hero__text text-light">
+                                <h1 class="h1 text-white">
+                                    <span class="text-primary me-0">Jeth</span> 
+                                    <span>Code</span>  
+                                    <span class="text-primary">.</span>
+                                </h1>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </section>
         <!-- End of Hero Section -->
 
         <!-- About Us Section -->
-        <section id="about-us" class="container section text-dark-gray about-us">
+        <section id="about-us" class="container section text-dark-gray about-us display-n">
             <h2 class="h2 mb-3 text-center text-black"> <span class="header-underline">About Us</span> </h2>
             <div class="row gap-3 justify-space-between align-start about-us__details">
                 <div class="col-12-sm col-5-md about-us__company border-line">
@@ -143,7 +119,7 @@
         <!-- End of About Us section -->
 
         <!-- Services Section -->
-        <section id="services" class="services container section text-center bg-light br pr-3 pl-3">
+        <!-- <section id="services" class="services container section text-center bg-light br pr-3 pl-3">
             <h2 class="h2"> <span class="header-underline">Services</span> </h2>
             <p class="services__description mt-2 mb-3">
                 These are the services our business provides.
@@ -225,11 +201,11 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- End of services Section -->
 
         <!-- Projects -->
-        <section id="projects" class="container section text-center">
+        <!-- <section id="projects" class="container section text-center">
             <h2 class="h2"><span class="header-underline">Our Projects</span> </h2>
             <p class="mt-2 mb-3">
                 These are some of our top Projects around the world.
@@ -292,30 +268,11 @@
                 </div>
 
             </div>
-        </section>
+        </section> -->
         <!-- End of project section -->
 
-        <!-- Banners -->
-        <section class="banners section">
-            <div class="container row gap-3 text-white text-center justify-space-between">
-                <div class="banner col-12-xs col-3-lg border-light p-5">
-                    <h2 class="banner__number h2"> 1000+ </h2>
-                    <p class="banner_description h5"> Projects Done </p>
-                </div>
-                <div class="banner col-12-xs col-3-lg border-light p-5">
-                    <h2 class="banner__number h2"> 500+ </h2>
-                    <p class="banner_description h5"> Clients/Partners </p>
-                </div>
-                <div class="banner col-12-xs col-3-lg border-light p-5">
-                    <h2 class="banner__number h2"> 100+ </h2>
-                    <p class="banner_description h5"> Accolades </p>
-                </div>
-            </div>
-        </section>
-        <!-- End Of Banner Section -->
-
         <!-- Testimonials -->
-        <section id="testimonies" class=" text-center  mt-5 mb-5">
+        <!-- <section id="testimonies" class=" text-center  mt-5 mb-5">
             <div class=" testimonies container bg-light br section ">
                 <div class="pr-3 pl-3">
 
@@ -514,100 +471,16 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- End of Testimonials -->
 
-        <!-- Blogs -->
-        <section id="blog" class="container section">
-            <h2 class="h2 text-center">
-                <span class="header-underline ">
-                    Blogs
-                </span>
-            </h2>
-            <p class="mt-2 mb-3 text-center">
-                Follow up on our weekly activities when you subscribe to our blogs.
-                <br>
-                We keep you informed on Construction related news.
-            </p>
-            <div class="blogs">
-                <div class="cards gap-3 row justify-space-between">
-                    <div class="card br-sm  blog col-12-sm col-3-lg col-5-md border-primary bg-light">
-                        <div class="card-header">
-                            <div class="card__title">
-                                <h5 class="h5 pl-2 pt-2 pb-2">
-                                    Repair a leaking pipe in 5mins.
-                                </h5>
-                            </div>
-                            <img loading="lazy" src="./assets/images/blog/blog1.jpg" class="card__image"
-                                alt="Repairing a leaking pipe">
-                        </div>
-                        <div class="card-body p-3">
-                            <div class="blog__date text-primary">Jan. 27 2023</div>
-                            <p class="mb-3 text-dark-gray">
-                                There are many temporary fixes for leaking pipes such as epoxy putty or
-                                pipe clamps.Try this while you wait for a
-                                plumber. If you want to fix the pipe...
-                            </p>
-                            <a class="btn-secondary text-white" href="https://www.wikihow.com/Fix-Leaking-Pipes"
-                                target="_blank">Read More</a>
-                        </div>
-                    </div>
-                    <div class="card br-sm blog col-12-sm col-3-lg col-5-md border-primary bg-light">
-                        <div class="card-header">
-                            <div class="card__title">
-                                <h5 class="h5 pl-2 pt-2 pb-2">
-                                    10 Biggest construction stories.
-                                </h5>
-                            </div>
-                            <img loading="lazy" src="./assets/images/blog/blog2.png" class="card__image"
-                                alt="construction stories">
-                        </div>
-                        <div class="card-body p-3">
-                            <div class="blog__date text-primary">Jan. 29 2023</div>
-                            <p class="mb-3 text-dark-gray">
-                                As decade come to close, Construction Managers looks
-                                back on what has been a
-                                momentous 10 years for the industry
-                                through the 10 biggest stories during the period...</p>
-                            <a class="btn-secondary text-white"
-                                href="https://constructionmanagement.co.uk/10-biggest-construction-stories-decade/"
-                                target="_blank">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                    <div class="card br-sm blog col-12-sm col-3-lg col-5-md border-primary bg-light">
-                        <div class="card-header">
-                            <div class="card__title">
-                                <h5 class="h5 pl-2 pt-2 pb-2">
-                                    Why climate are important?
-                                </h5>
-                            </div>
-                            <img loading="lazy" src="./assets/images/blog/blog3.jpg" class="card__image"
-                                alt="rain on building">
-                        </div>
-                        <div class="card-body p-3">
-                            <div class="blog__date text-primary">Jan. 30 2023</div>
-                            <p class="mb-3 text-dark-gray">
-                                Air temperature determines the materials used for the above-ground structure, while
-                                soil-temperature plays a big role in
-                                the choice of foundation...
-                            </p>
-                            <a class="btn-secondary text-white"
-                                href="https://constructionmanagement.co.uk/10-biggest-construction-stories-decade/"
-                                target="_blank">Read
-                                More </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
         <!-- End of Blogs Section -->
 
         <!-- Contact Us Section -->
-        <section id="contact-us" class="container contact-us section">
+        <!-- <section id="contact-us" class="container contact-us section"> -->
             <!-- Form toaster message -->
-            <section id="toaster" class="toaster">
+            <!-- <section id="toaster" class="toaster">
                 <p>Thanks for being interested in working with us!</p>
                 <p>We will reply as soon as possible.</p>
             </section>
@@ -705,14 +578,14 @@
                         width="inherit" height="450" frameborder="1" allowfullscreen="" aria-hidden="false" tabindex="0"
                         class="w-100 contact__location"></iframe>
                 </div>
-            </div>
-        </section>
+            </div> -->
+        <!-- </section> -->
         <!-- End of Contact section -->
 
     </main>
     <!-- End of Main Section -->
 
-    <footer class="footer bg-dark text-white pt-5 pb-5">
+    <!-- <footer class="footer bg-dark text-white pt-5 pb-5">
         <div class="container">
             <div class="row gap-3 justify-space-between footer__about">
 
@@ -778,7 +651,7 @@
             </div>
             <h4 class="h4 text-center fw-normal mt-5">COPYRIGHT &copy; WECONSTRUCT | 2023 | ALL RIGHTS RESERVED. </h4>
         </div>
-    </footer>
+    </footer> -->
 
 
 </body>
