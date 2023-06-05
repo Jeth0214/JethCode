@@ -9,29 +9,19 @@
     justify-content: flex-end;
     background-color: #2c2c2c;
     align-items: center;
-    background-image: url('../assets/images/home/hero.png');
-    background-size: cover;
-    background-position: center right 30%;
-    background-blend-mode: multiply;
-
-    @include breakpoints-up("md") {
-        background-color: #646464;
-        background-position: bottom right 40%;
-
-    }
-
-    @include breakpoints-up("lg") {
-        background-color: #646464;
-        background-position: bottom right 55%;
-
-    }
 
     .hero__text {
         text-align: center;
 
         @include breakpoints-up("md") {
             text-align: left;
-            max-width: 70%;
+            // max-width: 70%;
         }
+    }
+
+    .hero__image {
+        max-width: 400px;
+        border-radius: 50%;
+        filter: drop-shadow(-2px 8px 11px #62ff00);
     }
 }
