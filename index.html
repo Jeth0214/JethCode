@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/images/home/emojione-monotone_construction-worker.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/hero-section/jethcode.png" type="image/x-icon">
     <title>JethCode.</title>
 
     <!-- Font Awesome -->
@@ -17,12 +17,14 @@
 
     <!-- Core Theme Css -->
     <link rel="stylesheet" href="dist/style.css">
-
+     <!-- Load library from the CDN -->
+    <script defer src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <!-- Swiper Js -->
     <script defer src="dist/swiper-bundle.min.js"></script>
     <!-- JavaScript Link -->
     <script defer src="dist/script.js"></script>
     <script defer src="dist/form.js"></script>
+    <script defer src="dist/menu.js"></script>
 </head>
 
 <body>
@@ -33,7 +35,7 @@
             <!-- Nav Brand -->
             <div class="nav__brand ">
                 <a href="/">             
-                    <span class="nav__brand-name ">JethCode.</span>
+                    <img src="/assets/images/hero-section/jethcode.png" class="nav__brand-name ">
                 </a>
             </div>
             <!--  Cta Button-->
@@ -51,32 +53,67 @@
                     <h1 class="hero__title h1"> 
                         Hello! It's me  Roland Jethro Suyom
                     </h1>
-                    <h2 class="hero__position">I am a Junior Full Stack Developer</h2>
+                    <h2 class="hero__position">A Junior <span class="text-primary">Full Stack Developer</span></h2>
                     <div class="hero__description h4 mt-2 mb-2">
-                        <p>Lets  build beautiful websites.</p>
+                        <p>I love creating awesome websites.</p>
                         <p class="mt-2">
-                            I <span class="text-primary fw-700 fade-in">Analyze</span>. I
-                            <span class="text-primary fw-700 fade-in">Develop</span>. I <span
-                                class="text-primary fw-700 fade-in">Deploy</span>.
+                            I <span id="auto-type" class="text-primary fw-700"></span>
                         </p>
                     </div>
                     <a href="#contact-us" class="btn display-i-b btn-primary h4 text-white">
                         Hire me
                     </a>
                 </div>
-                <div class="col-4-md text-primary">
+                <div class="col-1-md"></div>
+                <div class="col-4-md text-primary display-f align-center flex-column justify-space-between">
                     <div class="hero__image">
-                        <img loading="lazy" src="/assets/images/Hero Section/Hero.png" alt="Roland Jethro Suyom">
+                        <img class="br-full" loading="lazy" src="/assets/images/hero-section/Hero.png" alt="Roland Jethro Suyom">
                     </div>
-                    <!-- <img src="/assets/icons/house-solid.svg" alt="">
-                    <i class="fa-solid fa-magnifying-glass"></i> -->
+                    <!-- Home Page menu -->
+                    <div class="hero-menu">
+                        <div class="hero-menu__toggle">
+                            <button class="btn-outline-primary">Home</button>
+                        </div>
+                        <!-- <ul>
+                            <li style="--1:0;">
+                                <a class="btn btn-outline-primary br-full p-2" href="#header">
+                                    <i class="fa-solid fa-house"></i>
+                                </a>
+                            </li>
+                            <li style="--1:0;">
+                                <a class="btn btn-outline-primary br-full p-2" href="#about-me">
+                                    <i class="fa-regular fa-address-card"></i>
+                                </a>
+                            </li>
+                            <li style="--1:0;">
+                                <a class="btn btn-outline-primary br-full p-2" href="#skills">
+                                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                                </a>
+                            </li>
+                            <li style="--1:0;">
+                                <a class="btn btn-outline-primary br-full p-2" href="#projects">
+                                    <i class="fa-solid fa-list-check"></i>
+                                </a>
+                            </li>
+                            <li style="--1:0;">
+                                <a class="btn btn-outline-primary br-full p-2" href="#testimonies">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </a>
+                            </li>
+                            <li style="--1:0;">
+                                <a class="btn btn-outline-primary br-full p-2" href="#contact-me">
+                                    <i class="fa-regular fa-message"></i>
+                                </a>
+                            </li>
+                        </ul> -->
+                    </div>
                 </div>
             </div>
         </section>
         <!-- End of Hero Section -->
 
         <!-- About Us Section -->
-        <!-- <section id="about-us" class="container section text-dark-gray about-us">
+        <!-- <section id="about-me" class="container section text-dark-gray about-us">
             <h2 class="h2 mb-3 text-center text-black"> <span class="header-underline">About Us</span> </h2>
             <div class="row gap-3 justify-space-between align-start about-us__details">
                 <div class="col-12-sm col-5-md about-us__company border-line">

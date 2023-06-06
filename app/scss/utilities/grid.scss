@@ -4,6 +4,8 @@
 $grid-columns: 12;
 $justify-contents: flex-end, flex-start, center, space-between, space-evenly, space-around;
 $align-items: flex-end, flex-start, stretch, center, start, baseline;
+$flex-direction: row,  column, row-reverse, column-reverse;
+
 $grid-gaps: (
     "o": 0rem,
     "1" : 10px,
@@ -42,6 +44,13 @@ $grid-gaps: (
 @each $value in $align-items {
     .align-#{$value} {
         align-items: $value;
+    }
+}
+
+// generate flex-direction 
+@each $value in $flex-direction {
+    .flex-#{$value} {
+        flex-direction: $value;
     }
 }
 

@@ -26,11 +26,13 @@ $value in $colors {
     }
 
     .btn-outline-#{$key} {
-        @include btn($white);
+        @include btn(transparent);
         border: $base-border-thickness solid $value;
-
+        background-color: transparent;
+        color: $value;
         &:hover {
             background-color: $value;
+            color: $white;
         }
     }
 
