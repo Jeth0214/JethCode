@@ -1,0 +1,7 @@
+@use 'abstract' as *;
+
+.menu-icon {
+    position: absolute;
+    transform-origin: 100px ;
+    transform: rotate(calc( 360deg / 6 * var(--i)));
+}
