@@ -29,7 +29,7 @@
 
 <body>
     <!-- Header -->
-    <header class="header" id="header">
+    <header class="header" id="Home">
         <div id="overlay"></div>
         <nav class="nav container pt-2 pb-2">
             <!-- Nav Brand -->
@@ -39,7 +39,7 @@
                 </a>
             </div>
             <!--  Cta Button-->
-            <button  class="btn-primary text-white nav__cta hide-for-medium"> Download CV</button>
+            <button  class="btn-primary text-white nav__cta"> Download CV</button>
         </nav>
     </header>
     <!-- End of Header -->
@@ -67,7 +67,7 @@
                 <div class="col-5-md text-primary display-f align-center flex-column justify-space-between position-relative">
                     <div class="hero__image text-center">
                         <img class="br-full" loading="lazy" src="/assets/images/hero-section/Hero.png" alt="Roland Jethro Suyom">
-                        <a href="#" class="btn btn-primary text-light">Home</a>
+                        <a href="#" id="menuBtn" class="btn btn-primary text-light display-n">Home</a>
                     </div>
                     <!-- Home Page menu -->
                     <div class="menu menu--hero">
@@ -76,32 +76,38 @@
                         </div>
 
                         <li style="--i:0;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#header">
+                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Home">
+                                <span class="sr-only">Home Button</span>
                                 <i class="fa-solid fa-house"></i>
                             </a>
                         </li>
                         <li style="--i:1;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#about-me">
+                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#About-me">
+                                <span class="sr-only">About Me</span>
                                 <i class="fa-regular fa-address-card"></i>
                             </a>
                         </li>
                         <li style="--i:2;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#skills">
+                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Projects" >
+                                <span class="sr-only">Projects Button</span>
                                 <i class="fa-solid fa-screwdriver-wrench"></i>
                             </a>
                         </li>
                         <li style="--i:3;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#projects">
+                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Skills">
+                                <span class="sr-only">Skills Button</span>
                                 <i class="fa-solid fa-list-check"></i>
                             </a>
                         </li>
                         <li style="--i:4;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#testimonies">
+                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Testimonies">
+                                <span class="sr-only">Testimonies <Button></Button></span>
                                 <i class="fa-solid fa-quote-left"></i>
                             </a>
                         </li>
                         <li style="--i:5;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#contact-me">
+                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Contact-me">
+                                <span class="sr-only">Contact Me Button</span>
                                 <i class="fa-regular fa-message"></i>
                             </a>
                         </li>
