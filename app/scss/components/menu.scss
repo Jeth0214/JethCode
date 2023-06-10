@@ -1,64 +1,62 @@
-@use 'abstract' as *;
+@use "abstract" as *;
 
 // .menu {
-   
+
 // }
 
 .menu {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .active {
+    .menu--hero__icon {
+      transform: rotate(calc(360deg / 6 * var(--i)));
+    }
+  }
+  .menu--hero__toggle {
     position: absolute;
-    inset: 0;
+    width: rem(60);
+    height: rem(60);
+    background-color: $white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    .active {
-        .menu--hero__icon {
-            transform: rotate(calc(360deg / 6 * var(--i)));
-        }
-    }
-    .menu--hero__toggle {
-        position: absolute;
-        width: rem(60);
-        height: rem(60);
-        background-color: $white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        cursor: pointer;
-        visibility: hidden;
-        font-size: rem(24);
-    }
-    .menu--hero__icon {
-        position: absolute;
-        list-style: none;
-        transition: 0.5s;
-        transition-delay: calc(0.1s * var(--i));
-        transform: rotate(0deg) translateX(197px);
-        transform-origin: 225px;
-        filter: drop-shadow(-2px 8px 11px $primary);
-        left: 0;
-        visibility: hidden;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    visibility: hidden;
+    font-size: rem(24);
+  }
+  .menu--hero__icon {
+    position: absolute;
+    list-style: none;
+    transition: 0.5s;
+    transition-delay: calc(0.1s * var(--i));
+    transform: rotate(0deg) translateX(197px);
+    transform-origin: rem(220);
+    filter: drop-shadow(-2px 8px 11px $primary);
+    left: 0;
+    visibility: hidden;
 
-        a {
-            width: 60px;
-            height: 60px;
-            font-size: rem(24);
-        }
+    a {
+      width: 60px;
+      height: 60px;
+      font-size: rem(24);
     }
-    .menu--hero__icon {
-        transition: 1s ease-in-out;
-        a.active {
-            background-color: #d83a34;
-            color: #f8f8fb; 
-        }
+  }
+  .menu--hero__icon {
+    transition: 1s ease-in-out;
+    a.active {
+      background-color: #d83a34;
+      color: #f8f8fb;
     }
+  }
 }
 
 .menu.active {
-    
-        .menu--hero__icon {
-            visibility: visible;
-            transform: rotate(calc(360deg / 6 * var(--i)));
-        }
-    
+  .menu--hero__icon {
+    visibility: visible;
+    transform: rotate(calc(360deg / 6 * var(--i)));
+  }
 }

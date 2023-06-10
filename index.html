@@ -1,124 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/assets/images/hero-section/jethcode.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/assets/images/hero-section/jethcode.png"
+      type="image/x-icon"
+    />
     <title>JethCode.</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Swiper Css -->
-    <link rel="stylesheet" href="dist/swiper-bundle.min.css">
+    <link rel="stylesheet" href="dist/swiper-bundle.min.css" />
 
     <!-- Core Theme Css -->
-    <link rel="stylesheet" href="dist/style.css">
-     <!-- Load library from the CDN -->
-    <script defer src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="dist/style.css" />
+    <!-- Load library from the CDN -->
+    <script
+      defer
+      src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"
+    ></script>
     <!-- Swiper Js -->
     <script defer src="dist/swiper-bundle.min.js"></script>
     <!-- JavaScript Link -->
     <script defer src="dist/script.js"></script>
     <script defer src="dist/form.js"></script>
     <script defer src="dist/menu.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Header -->
     <header class="header" id="Home">
-        <div id="overlay"></div>
-        <nav class="nav container pt-2 pb-2">
-            <!-- Nav Brand -->
-            <div class="nav__brand ">
-                <a href="/">             
-                    <img src="/assets/images/hero-section/jethcode.png" class="nav__brand-name ">
-                </a>
-            </div>
-            <!--  Cta Button-->
-            <button  class="btn-primary text-white nav__cta"> Download CV</button>
-        </nav>
+      <div id="overlay"></div>
+      <nav class="nav container pt-2 pb-2">
+        <!-- Nav Brand -->
+        <div class="nav__brand">
+          <a href="/">
+            <img
+              src="/assets/images/hero-section/jethcode.png"
+              class="nav__brand-name"
+            />
+          </a>
+        </div>
+        <!--  Cta Button-->
+        <button class="btn-primary text-white nav__cta">Download CV</button>
+      </nav>
     </header>
     <!-- End of Header -->
     <!-- Main Section -->
     <main class="main">
-
-        <!-- Hero Section -->
-        <section class="hero ">
-            <div class="container row">
-                <div class="hero__text text-light col-12-xs col-7-md">
-                    <h1 class="hero__title h1"> 
-                        Hello! It's me  Roland Jethro Suyom
-                    </h1>
-                    <h2 class="hero__position mt-2 mb-1">A Junior <span class="text-primary">Full Stack Developer</span></h2>
-                    <div class="hero__description h4 mb-2">
-                        <p>I love creating awesome websites.</p>
-                        <p>
-                            I <span id="auto-type" class="text-primary fw-700"></span>
-                        </p>
-                    </div>
-                    <a href="#contact-us" class="btn display-i-b btn-primary h4 text-white">
-                        Hire me
-                    </a>
-                </div>
-                <div class="col-5-md text-primary display-f align-center flex-column justify-space-between position-relative">
-                    <div class="hero__image text-center">
-                        <img class="br-full" loading="lazy" src="/assets/images/hero-section/Hero.png" alt="Roland Jethro Suyom">
-                        <a href="#" id="menuBtn" class="btn btn-primary text-light display-n">Home</a>
-                    </div>
-                    <!-- Home Page menu -->
-                    <div class="menu menu--hero">
-                        <div class="menu--hero__toggle">
-                            <i class="fa-solid fa-ellipsis-vertical"></i>
-                        </div>
-
-                        <li style="--i:0;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Home">
-                                <span class="sr-only">Home Button</span>
-                                <i class="fa-solid fa-house"></i>
-                            </a>
-                        </li>
-                        <li style="--i:1;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#About-me">
-                                <span class="sr-only">About Me</span>
-                                <i class="fa-regular fa-address-card"></i>
-                            </a>
-                        </li>
-                        <li style="--i:2;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Projects" >
-                                <span class="sr-only">Projects Button</span>
-                                <i class="fa-solid fa-screwdriver-wrench"></i>
-                            </a>
-                        </li>
-                        <li style="--i:3;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Skills">
-                                <span class="sr-only">Skills Button</span>
-                                <i class="fa-solid fa-list-check"></i>
-                            </a>
-                        </li>
-                        <li style="--i:4;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Testimonies">
-                                <span class="sr-only">Testimonies <Button></Button></span>
-                                <i class="fa-solid fa-quote-left"></i>
-                            </a>
-                        </li>
-                        <li style="--i:5;" class="menu--hero__icon">
-                            <a class="btn btn-outline-primary display-f align-center justify-center br-full" href="#Contact-me">
-                                <span class="sr-only">Contact Me Button</span>
-                                <i class="fa-regular fa-message"></i>
-                            </a>
-                        </li>
-                    </div>
-                </div>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container row">
+          <div class="hero__text text-light col-12-xs col-7-md">
+            <h1 class="hero__title h1">Hello! It's me Roland Jethro Suyom</h1>
+            <h2 class="hero__position mt-2 mb-1">
+              A Junior <span class="text-primary">Full Stack Developer</span>
+            </h2>
+            <div class="hero__description h4 mb-2">
+              <p>I love creating awesome websites.</p>
+              <p>I <span id="auto-type" class="text-primary fw-700"></span></p>
             </div>
-        </section>
-        <!-- End of Hero Section -->
+            <a
+              href="#contact-us"
+              class="btn display-i-b btn-primary h4 text-white"
+            >
+              Hire me
+            </a>
+          </div>
+          <div
+            class="col-5-md text-primary display-f align-center flex-column justify-space-between position-relative"
+          >
+            <div class="hero__image text-center">
+              <img
+                class="br-full"
+                loading="lazy"
+                src="/assets/images/hero-section/Hero.png"
+                alt="Roland Jethro Suyom"
+              />
+              <a
+                href="#"
+                id="menuBtn"
+                class="btn btn-primary text-light display-n"
+                >Home</a
+              >
+            </div>
+            <!-- Home Page menu -->
+            <div class="menu menu--hero">
+              <div class="menu--hero__toggle">
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </div>
 
-        <!-- About Us Section -->
-        <!-- <section id="about-me" class="container section text-dark-gray about-us">
+              <li style="--i: 0" class="menu--hero__icon">
+                <a
+                  class="btn btn-outline-primary display-f align-center justify-center br-full"
+                  href="#Home"
+                >
+                  <span class="sr-only">Home Button</span>
+                  <i class="fa-solid fa-house"></i>
+                </a>
+              </li>
+              <li style="--i: 1" class="menu--hero__icon">
+                <a
+                  class="btn btn-outline-primary display-f align-center justify-center br-full"
+                  href="#About-me"
+                >
+                  <span class="sr-only">About Me</span>
+                  <i class="fa-regular fa-address-card"></i>
+                </a>
+              </li>
+              <li style="--i: 2" class="menu--hero__icon">
+                <a
+                  class="btn btn-outline-primary display-f align-center justify-center br-full"
+                  href="#Projects"
+                >
+                  <span class="sr-only">Projects Button</span>
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                </a>
+              </li>
+              <li style="--i: 3" class="menu--hero__icon">
+                <a
+                  class="btn btn-outline-primary display-f align-center justify-center br-full"
+                  href="#Skills"
+                >
+                  <span class="sr-only">Skills Button</span>
+                  <i class="fa-solid fa-list-check"></i>
+                </a>
+              </li>
+              <li style="--i: 4" class="menu--hero__icon">
+                <a
+                  class="btn btn-outline-primary display-f align-center justify-center br-full"
+                  href="#Testimonies"
+                >
+                  <span class="sr-only">Testimonies <button></button></span>
+                  <i class="fa-solid fa-quote-left"></i>
+                </a>
+              </li>
+              <li style="--i: 5" class="menu--hero__icon">
+                <a
+                  class="btn btn-outline-primary display-f align-center justify-center br-full"
+                  href="#Contact-me"
+                >
+                  <span class="sr-only">Contact Me Button</span>
+                  <i class="fa-regular fa-message"></i>
+                </a>
+              </li>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Hero Section -->
+
+      <!-- About Us Section -->
+      <!-- <section id="about-me" class="container section text-dark-gray about-us">
             <h2 class="h2 mb-3 text-center text-black"> <span class="header-underline">About Us</span> </h2>
             <div class="row gap-3 justify-space-between align-start about-us__details">
                 <div class="col-12-sm col-5-md about-us__company border-line">
@@ -167,10 +210,10 @@
             </div>
 
         </section> -->
-        <!-- End of About Us section -->
+      <!-- End of About Us section -->
 
-        <!-- Services Section -->
-        <!-- <section id="services" class="services container section text-center bg-light br pr-3 pl-3">
+      <!-- Services Section -->
+      <!-- <section id="services" class="services container section text-center bg-light br pr-3 pl-3">
             <h2 class="h2"> <span class="header-underline">Services</span> </h2>
             <p class="services__description mt-2 mb-3">
                 These are the services our business provides.
@@ -253,10 +296,10 @@
 
             </div>
         </section> -->
-        <!-- End of services Section -->
+      <!-- End of services Section -->
 
-        <!-- Projects -->
-        <!-- <section id="projects" class="container section text-center">
+      <!-- Projects -->
+      <!-- <section id="projects" class="container section text-center">
             <h2 class="h2"><span class="header-underline">Our Projects</span> </h2>
             <p class="mt-2 mb-3">
                 These are some of our top Projects around the world.
@@ -320,10 +363,10 @@
 
             </div>
         </section> -->
-        <!-- End of project section -->
+      <!-- End of project section -->
 
-        <!-- Testimonials -->
-        <!-- <section id="testimonies" class=" text-center  mt-5 mb-5">
+      <!-- Testimonials -->
+      <!-- <section id="testimonies" class=" text-center  mt-5 mb-5">
             <div class=" testimonies container bg-light br section ">
                 <div class="pr-3 pl-3">
 
@@ -523,15 +566,14 @@
                 </div>
             </div>
         </section> -->
-        <!-- End of Testimonials -->
+      <!-- End of Testimonials -->
 
-    
-        <!-- End of Blogs Section -->
+      <!-- End of Blogs Section -->
 
-        <!-- Contact Us Section -->
-        <!-- <section id="contact-us" class="container contact-us section"> -->
-            <!-- Form toaster message -->
-            <!-- <section id="toaster" class="toaster">
+      <!-- Contact Us Section -->
+      <!-- <section id="contact-us" class="container contact-us section"> -->
+      <!-- Form toaster message -->
+      <!-- <section id="toaster" class="toaster">
                 <p>Thanks for being interested in working with us!</p>
                 <p>We will reply as soon as possible.</p>
             </section>
@@ -630,9 +672,8 @@
                         class="w-100 contact__location"></iframe>
                 </div>
             </div> -->
-        <!-- </section> -->
-        <!-- End of Contact section -->
-
+      <!-- </section> -->
+      <!-- End of Contact section -->
     </main>
     <!-- End of Main Section -->
 
@@ -703,8 +744,5 @@
             <h4 class="h4 text-center fw-normal mt-5">COPYRIGHT &copy; WECONSTRUCT | 2023 | ALL RIGHTS RESERVED. </h4>
         </div>
     </footer> -->
-
-
-</body>
-
+  </body>
 </html>
