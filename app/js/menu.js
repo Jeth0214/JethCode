@@ -42,11 +42,18 @@ window.addEventListener("resize", () => {
   //     navbar.classList.remove("nav--open-menu");
   //     overlay.classList.remove("overlay");
   // }
-
-  console.log("resize", window.innerWidth);
-  if (window.innerWidth < 1169) {
+  let menuContainer = document.querySelector("#hero-menu-container");
+  console.log("resize", menuContainer.offsetWidth);
+  let width = menuContainer.offsetWidth;
+  if (width < 442) {
     menuItems.forEach((menu) => {
-      //   menu.style.left = "-30px";
+      menu.style.transformOrigin = width / 2 + 20 + "px";
+      menu.style.left = width - (width + 20) + "px";
+    });
+  } else {
+    menuItems.forEach((menu) => {
+      menu.style.transformOrigin = 200 + "px";
+      menu.style.left = 0 + "px";
     });
   }
 });
