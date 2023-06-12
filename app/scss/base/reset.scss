@@ -1,30 +1,29 @@
-@use 'abstract' as *;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,700&display=swap');
-
+@use "abstract" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,700&display=swap");
 
 // box sizing
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: var(--scroll-padding, rem(50));
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, rem(50));
 }
 
-// set up body 
+// set up body
 body {
-    font-family: $ff-sans-serif;
-    min-height: 100vh;
-    font-size: 14px;
-    line-height: $lh-base;
+  font-family: $ff-sans-serif;
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: $lh-base;
+  background-color: $black;
 }
-
 
 // reset margins
 body,
@@ -37,21 +36,21 @@ h6,
 p,
 figure,
 picture {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 // images
 img,
 picture {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 // list
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 // links
@@ -59,31 +58,30 @@ ul {
 a,
 a:visited,
 a:active {
-    cursor: pointer;
-    text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 // buttons
 button {
-    cursor: pointer;
-    font: inherit
+  cursor: pointer;
+  font: inherit;
 }
 
 // forms
 input,
 textarea {
-    font-family: inherit;
+  font-family: inherit;
 }
 
 /* remove animations for people who turned it off*/
 @media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::after,
-    *::before {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
+  *,
+  *::after,
+  *::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

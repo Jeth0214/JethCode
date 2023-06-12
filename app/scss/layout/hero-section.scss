@@ -1,28 +1,35 @@
-@use 'abstract' as *;
+@use "abstract" as *;
 
 .hero {
-    //min-height: rem(668);
-    min-height: 100vh;
-    min-height: 100dvh;
-    //height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    background-color: #2c2c2c;
-    align-items: center;
+  //min-height: rem(668);
+  min-height: 100vh;
+  min-height: 100dvh;
+  //height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  background: url(/assets/images/hero-section/background-stars.svg);
+  background-color: $black;
+  align-items: center;
 
-    .hero__text {
-        text-align: center;
+  .hero__text {
+    text-align: center;
 
-        @include breakpoints-up("md") {
-            text-align: left;
-            // max-width: 70%;
-        }
+    @include breakpoints-up("md") {
+      text-align: left;
+      // max-width: 70%;
     }
+  }
 
-    .hero__image {
-        max-width: 300px;
-        border-radius: 50%;
-        z-index: 1000;
-        filter: drop-shadow(-2px 8px 11px $primary);
+  #hero-menu-container {
+    @include breakpoints-up("md") {
+      display: flex;
     }
+  }
+
+  .hero__image {
+    max-width: 300px;
+    border-radius: 50%;
+    z-index: 1000;
+    filter: drop-shadow(-2px 8px 11px $primary);
+  }
 }

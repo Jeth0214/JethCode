@@ -1,19 +1,19 @@
 @use "abstract" as *;
 
-// .menu {
-
-// }
-
 .menu {
   position: absolute;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
   .active {
     .menu--hero__icon {
       transform: rotate(calc(360deg / 6 * var(--i)));
     }
+  }
+  @include breakpoints-up("md") {
+    display: flex;
   }
   .menu--hero__toggle {
     position: absolute;
