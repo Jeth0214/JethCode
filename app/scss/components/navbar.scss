@@ -63,61 +63,79 @@
       visibility: visible;
       height: auto;
       position: relative;
-      width: 400px;
+      width: 470px;
+      height: 60px;
       display: flex;
       background-color: $white;
       justify-content: center;
       align-items: center;
+      border-radius: 10px;
     }
 
-    .nav__link {
-      position: relative;
-      transition: all 0.2s ease-in-out;
-      letter-spacing: 2px;
-
-      &:hover {
-        color: $primary;
+    .nav__lists {
+      display: flex;
+      width: 420px;
+      flex-direction: row;
+      .nav__list {
+        position: relative;
+        width: rem(70);
+        height: rem(60);
+        z-index: 2;
+        .nav__link {
+          position: relative;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          flex-direction: column;
+          width: 100%;
+          justify-content: center;
+          .nav__link-icon {
+            position: relative;
+            display: block;
+            line-height: rem(65);
+            font-size: rem(20);
+            transition: 0.5s;
+          }
+          .nav__link-text {
+            position: absolute;
+            padding: rem(1) rem(7);
+            background-color: $primary;
+            color: $white;
+            border-radius: 12px;
+            font-weight: 400;
+            font-size: 0.75em;
+            letter-spacing: 0.05em;
+            transition: 1s ease-in-out;
+            opacity: 0;
+            transform: translateY(15px);
+          }
+        }
       }
 
-      &:not(:last-child) {
-        margin-bottom: rem(20);
-
-        @include breakpoints-up("md") {
-          margin-right: rem(10);
-        }
-
-        @include breakpoints-up("lg") {
-          margin-right: rem(20);
-        }
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: rem(3);
-        background-color: $primary;
-        top: rem(24);
-        opacity: 0;
-        transition: all 0.2s ease-in-out;
-
-        @include breakpoints-up("md") {
-          top: rem(35);
-        }
-
-        @include breakpoints-up("lg") {
-          top: rem(39);
+      .nav__list--active {
+        .nav__link {
+          color: $primary;
+          .nav__link-icon {
+            transform: translateY(-32px);
+            opacity: 1;
+          }
+          .nav__link-text {
+            transform: translateY(-4px);
+            opacity: 1;
+          }
         }
       }
     }
 
-    .nav__link--active {
-      color: $primary;
-      font-weight: bold;
-
-      &::before {
-        opacity: 1;
-      }
+    .nav__indicator {
+      position: absolute;
+      top: -50%;
+      width: rem(70);
+      height: rem(70);
+      background-color: $white;
+      z-index: 1;
+      transition: 0.5s;
+      border-radius: 50%;
     }
   }
 

@@ -37,7 +37,7 @@
     transform-origin: rem(220);
     filter: drop-shadow(-2px 8px 11px $primary);
     left: 0;
-    visibility: hidden;
+    opacity: 0;
 
     a {
       width: 60px;
@@ -56,7 +56,7 @@
 
 .menu.active {
   .menu--hero__icon {
-    visibility: visible;
+    opacity: 1;
     transform: rotate(calc(360deg / 6 * var(--i)));
   }
 }

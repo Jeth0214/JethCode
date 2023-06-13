@@ -2,6 +2,7 @@ const menu = document.querySelector(".menu");
 const toggler = document.querySelector(".menu--hero__toggle");
 const menuItems = document.querySelectorAll(".menu--hero__icon");
 const menuBtn = document.querySelector("#menuBtn");
+const menuImage = document.querySelector(".hero__image");
 
 // This function is for typing text effects
 let typed = new Typed("#auto-type", {
@@ -55,14 +56,16 @@ menuBtn.addEventListener("click", () => {
 
 function resizeMenu() {
   let menuContainer = document.querySelector("#hero-menu-container");
-  console.log("resize", menuContainer.offsetWidth);
   let width = menuContainer.offsetWidth;
   if (width < 442) {
     menuItems.forEach((menu) => {
       menu.style.transformOrigin = width / 2 + 22 + "px";
-      menu.style.left = width - (width + 20) + "px";
-      menu.style.transution = "0.2s";
+      menu.style.left = width - (width + 25) + "px";
+      menu.style.zIndex = 10;
     });
+    setTimeout(() => {
+      menuImage.style.zIndex = 2;
+    }, 1500);
   } else {
     menuItems.forEach((menu) => {
       menu.style.transformOrigin = 220 + "px";
