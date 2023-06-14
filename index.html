@@ -959,5 +959,20 @@
             <h4 class="h4 text-center fw-normal mt-5">COPYRIGHT &copy; WECONSTRUCT | 2023 | ALL RIGHTS RESERVED. </h4>
         </div>
     </footer> -->
+
+    <script>
+      const list = document.querySelectorAll(".nav__list");
+      function activeLink() {
+        list.forEach( (item) => {
+          item.classList.remove('nav__list--active');
+          this.classList.add('nav__list--active');
+        })
+      };
+
+      list.forEach((link) => {
+        link.addEventListener("click", activeLink)
+    
+      });
+    </script>
   </body>
 </html>

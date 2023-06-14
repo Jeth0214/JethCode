@@ -12,11 +12,6 @@ let typed = new Typed("#auto-type", {
   loop: true,
 });
 
-toggler.onclick = () => {
-  // console.log("clicked");
-  menu.classList.toggle("active");
-};
-
 // Animate Circular Menu when the page was loaded
 window.addEventListener("load", function (event) {
   menu.classList.add("active");
@@ -32,6 +27,11 @@ window.addEventListener("load", function (event) {
 window.addEventListener("resize", () => {
   resizeMenu();
 });
+
+toggler.onclick = () => {
+  // console.log("clicked");
+  menu.classList.toggle("active");
+};
 
 menuItems.forEach((menuItem) => {
   menuItem.addEventListener("mouseover", () => {

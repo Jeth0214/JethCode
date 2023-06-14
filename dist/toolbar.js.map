@@ -1,0 +1,1 @@
+{"version":3,"sources":["toolbar.js"],"names":["console","log"],"mappings":"AAAA,aAAAA,QAAQC,IAAI","file":"toolbar.js","sourcesContent":["console.log(\"Toolbar connected!\");\r\n"]}

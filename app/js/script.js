@@ -2,7 +2,7 @@ const header = document.querySelector("#Home");
 const navToggle = document.getElementById("nav__toggle");
 const navbar = document.querySelector(".nav");
 const navLinks = document.querySelector(".nav__links");
-const navLink = document.querySelectorAll(".nav__link");
+const navLink = document.querySelectorAll(".nav__list");
 const overlay = document.querySelector("#overlay");
 const sections = document.querySelectorAll("section");
 const fabButton = document.querySelector(".fab-button");
@@ -34,30 +34,32 @@ window.onscroll = function () {
   showFabButton();
 };
 // hide and show toggle menu using the hamburger menu
-navToggle.addEventListener("click", () => {
-  toggleMenu();
-});
+// navToggle.addEventListener("click", () => {
+//   toggleMenu();
+// });
 
 /**
  * hide and show toggle menu using the links
  * set the active styling upon clicking the link
  */
-navLink.forEach((link) => {
-  link.addEventListener("click", () => {
-    if (window.innerWidth > 768) {
-      navbar.classList.remove("nav--open-menu");
-      overlay.classList.remove("overlay");
-    } else {
-      toggleMenu();
-    }
-
-    link.classList.add("nav__link--active");
-    let siblingLinks = [...navLink].filter((child) => child != link);
-    siblingLinks.forEach((element) => {
-      element.classList.remove("nav__link--active");
-    });
-  });
-});
+// navLink.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     // if (window.innerWidth > 768) {
+//     //   navbar.classList.remove("nav--open-menu");
+//     //   overlay.classList.remove("overlay");
+//     // } else {
+//     //   toggleMenu();
+//     // }
+//     console.log(link);
+//     link.classList.add("nav__link--active");
+//     let siblingLinks = [...navLink].filter((child) => child != link);
+//     siblingLinks.forEach((element) => {
+//       if (element.classList.contains("nav__link--active")) {
+//         element.classList.remove("nav__link--active");
+//       }
+//     });
+//   });
+// });
 
 // hide and show toggle menu function
 function toggleMenu() {
@@ -83,11 +85,11 @@ function scrollToTop() {
 
 // When the user scrolls down 60px  from the top , shrink the navbar and show the scroll top button
 function showFabButton() {
-  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-    fabButton.style.display = "block";
-  } else {
-    fabButton.style.display = "none";
-  }
+  // if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
+  //   fabButton.style.display = "block";
+  // } else {
+  //   fabButton.style.display = "none";
+  // }
 }
 
 // swiper configurations
