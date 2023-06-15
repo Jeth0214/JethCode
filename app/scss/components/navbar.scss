@@ -95,7 +95,10 @@
             line-height: rem(65);
             font-size: rem(20);
             transition: 0.5s;
-            color: $primary;
+            color: $dark-gray;
+            &:hover {
+              color: $primary;
+            }
           }
           .nav__link-text {
             position: absolute;
@@ -119,6 +122,7 @@
           .nav__link-icon {
             transform: translateY(-32px);
             opacity: 1;
+            color: $primary;
           }
           .nav__link-text {
             transform: translateY(-4px);
