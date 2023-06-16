@@ -10,18 +10,26 @@
   background: url(/assets/images/hero-section/background-stars.svg);
   background-color: $black;
   align-items: center;
+  .hero-cta {
+    display: flex;
+    justify-content: center;
+    @include breakpoints-up("lg") {
+      justify-content: start;
+    }
+  }
 
   .hero__text {
     text-align: center;
 
-    @include breakpoints-up("md") {
+    @include breakpoints-up("lg") {
       text-align: left;
       // max-width: 70%;
     }
   }
 
   #hero-menu-container {
-    @include breakpoints-up("md") {
+    display: none;
+    @include breakpoints-up("lg") {
       display: flex;
     }
   }

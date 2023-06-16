@@ -51,9 +51,15 @@
             />
           </a>
         </div>
+         <!-- Nav Hamburger Menu -->
+            <div id="nav__toggle" class="nav__toggle hide-for-desktop">
+                <span class="nav__burger-line nav__burger-line--1"></span>
+                <span class="nav__burger-line nav__burger-line--2"></span>
+                <span class="nav__burger-line nav__burger-line--3"></span>
+            </div>
 
         <!-- Nav Links -->
-        <div class="nav__links hide-for-mobile">
+        <div class="nav__links">
             <ul class="nav__lists">
               <li  class="nav__list nav__list--active">
                 <a
@@ -132,7 +138,7 @@
             </ul>
         </div>
         <!--  Cta Button-->
-        <button class="btn-primary text-white nav__cta">Download CV</button>
+        <button class="btn-primary text-white nav__cta hide-for-desktop">Download CV</button>
       </nav>
     </header>
     <!-- End of Header -->
@@ -141,7 +147,7 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="container row">
-          <div class="hero__text text-light col-12-xs col-7-md">
+          <div class="hero__text text-light col-12-xs col-7-lg">
             <h1 class="hero__title h1">Hello! It's me Roland Jethro Suyom</h1>
             <h2 class="hero__position mt-2 mb-1">
               A Junior <span class="text-primary">Full Stack Developer</span>
@@ -150,16 +156,20 @@
               <p>I love creating awesome websites.</p>
               <p><span id="auto-type" class="text-primary fw-700"></span></p>
             </div>
-            <a
+            <div class="hero-cta">
+              <a
               href="#contact-us"
-              class="btn display-i-b btn-primary h4 text-white"
+              class="btn display-i-b btn-primary h4 text-white mr-3"
             >
               Hire me
             </a>
+               <button class="btn-outline-primary text-white hide-for-medium">Download CV</button>
+            </div>
+            
           </div>
           <div
             id="hero-menu-container"
-            class="col-5-md display-n text-primary align-center flex-column justify-space-between position-relative"
+            class="col-5-lg display-n text-primary align-center flex-column justify-space-between position-relative"
           >
             <div class="hero__image text-center">
               <img
@@ -959,20 +969,5 @@
             <h4 class="h4 text-center fw-normal mt-5">COPYRIGHT &copy; WECONSTRUCT | 2023 | ALL RIGHTS RESERVED. </h4>
         </div>
     </footer> -->
-
-    <script>
-      const list = document.querySelectorAll(".nav__list");
-      function activeLink() {
-        list.forEach( (item) => {
-          item.classList.remove('nav__list--active');
-          this.classList.add('nav__list--active');
-        })
-      };
-
-      list.forEach((link) => {
-        link.addEventListener("click", activeLink)
-    
-      });
-    </script>
   </body>
 </html>

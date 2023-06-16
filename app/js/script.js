@@ -2,7 +2,7 @@ const header = document.querySelector("#Home");
 const navToggle = document.getElementById("nav__toggle");
 const navbar = document.querySelector(".nav");
 const navLinks = document.querySelector(".nav__links");
-const navLink = document.querySelectorAll(".nav__list");
+const navList = document.querySelectorAll(".nav__list");
 const overlay = document.querySelector("#overlay");
 const sections = document.querySelectorAll("section");
 const fabButton = document.querySelector(".fab-button");
@@ -34,9 +34,10 @@ window.onscroll = function () {
   showFabButton();
 };
 // hide and show toggle menu using the hamburger menu
-// navToggle.addEventListener("click", () => {
-//   toggleMenu();
-// });
+navToggle.addEventListener("click", () => {
+  console.log("toggle");
+  toggleMenu();
+});
 
 /**
  * hide and show toggle menu using the links
@@ -61,9 +62,20 @@ window.onscroll = function () {
 //   });
 // });
 
+function activeLink() {
+  navList.forEach((item) => {
+    item.classList.remove("nav__list--active");
+    this.classList.add("nav__list--active");
+  });
+}
+
+navList.forEach((link) => {
+  link.addEventListener("click", activeLink);
+});
+
 // hide and show toggle menu function
 function toggleMenu() {
-  fabButton.style.display = "none";
+  // fabButton.style.display = "none";
   overlay.classList.toggle("overlay");
   navbar.classList.toggle("nav--open-menu");
   header.classList.add("bg-dark", "box-shadow");

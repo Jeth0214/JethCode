@@ -61,11 +61,7 @@ function resizeMenu() {
     menuItems.forEach((menu) => {
       menu.style.transformOrigin = width / 2 + 22 + "px";
       menu.style.left = width - (width + 25) + "px";
-      menu.style.zIndex = 10;
     });
-    setTimeout(() => {
-      menuImage.style.zIndex = 2;
-    }, 1500);
   } else {
     menuItems.forEach((menu) => {
       menu.style.transformOrigin = 220 + "px";
