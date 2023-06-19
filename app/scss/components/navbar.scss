@@ -185,9 +185,11 @@
 
 .nav__list:not(.nav__list--active):hover {
   .nav__link-icon {
-    color: $white;
     transform: translateY(-32px);
-    opacity: 0;
+    opacity: 1;
+    @include breakpoints-up("md") {
+      opacity: 0 !important;
+    }
   }
   .nav__link-text {
     transform: translateY(0px) !important;

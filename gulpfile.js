@@ -22,9 +22,12 @@ function jsTask() {
       "app/js/script.js",
       "app/js/form.js",
       "app/js/menu.js",
-      "app/js/toolbar.js",
+      "app/js/swiper.js",
+      "app/js/auto-type.js",
     ],
-    { sourcemaps: true }
+    {
+      sourcemaps: true,
+    }
   )
     .pipe(babel({ presets: ["@babel/preset-env"] }))
     .pipe(terser())
