@@ -14,6 +14,9 @@ const menuItems = document.querySelectorAll(".menu--hero__icon");
 const menuBtn = document.querySelector("#menuBtn");
 const menuImage = document.querySelector(".hero__image");
 
+let href;
+let menuTitle = "Home";
+
 /**
  * Global
  * Windows
@@ -29,7 +32,11 @@ window.addEventListener("load", function (event) {
     setTimeout(() => {
       menuBtn.classList.remove("display-n");
       menuItems[0].children[0].classList.add("active");
-    }, 1000);
+    }, 500);
+  }
+
+  if (window.scrollY > 80 || navbar.classList.contains("nav--open-menu")) {
+    navLinks.style.display = "flex";
   }
 });
 
@@ -45,12 +52,11 @@ window.addEventListener("resize", () => {
 //set scroll padding top dynamically when smooth scrolling
 document.documentElement.style.setProperty(
   "--scroll-padding",
-  header.scrollY - 5 + "px"
+  +header.scrollY - 5 + "px"
 );
 
 // add an event listener for scroll
 window.onscroll = function () {
-  console.log("scroll", window.scrollY);
   if (window.scrollY > 80 || navbar.classList.contains("nav--open-menu")) {
     header.classList.add("bg-dark", "box-shadow");
     navbar.classList.add("nav__brand--shrink");
@@ -61,7 +67,16 @@ window.onscroll = function () {
     navbar.classList.remove("nav__brand--shrink");
     menu.classList.add("active");
     navLinks.style.display = "none";
-    // history.replaceState(null, "", location.origin);
+    // menuItems[0].children[0].classList.add("active");
+    // menuBtn.textContent = "Home";
+    // menuBtn.href = "#Home";
+    // let siblingLinks = [...menuItems].filter((child) => child != menuItems[0]);
+    // siblingLinks.forEach((element) => {
+    //   element.children[0].classList.remove("active");
+    // });
+  }
+  if (window.scrollY == 0) {
+    location.href = "http://localhost:3000";
   }
   //  navHighlighter();
   showFabButton();
@@ -109,8 +124,6 @@ toggler.onclick = () => {
  *  Circular Menu
  */
 menuItems.forEach((menuItem) => {
-  let href;
-  let menuTitle;
   menuItem.addEventListener("mouseover", () => {
     href = menuItem.children[0].attributes.href.textContent;
     menuTitle = href.slice(1).replace("-", " ");
@@ -124,13 +137,9 @@ menuItems.forEach((menuItem) => {
   });
   menuItem.children[0].addEventListener("click", (event) => {
     console.log(menuTitle);
-    console.log(screenY);
+
     if (menuTitle == "Home") {
-      if (window.screenY >= 0) {
-        return;
-      } else {
-        scrollToTop();
-      }
+      return;
     } else {
       menu.classList.remove("active");
     }
@@ -138,7 +147,11 @@ menuItems.forEach((menuItem) => {
 });
 
 menuBtn.addEventListener("click", () => {
-  menu.classList.remove("active");
+  if (menuTitle == "Home" || menuTitle == "") {
+    return;
+  } else {
+    menu.classList.remove("active");
+  }
 });
 
 /***************************************************************************************** */
@@ -173,7 +186,9 @@ function scrollToTop() {
   navbar.classList.remove("nav--open-menu");
   history.replaceState(null, "", location.origin);
   menuItems[0].children[0].classList.add("active");
-  let siblingLinks = [...menuItems].filter((child) => child != menuItem);
+  menuBtn.textContent = "Home";
+  menuBtn.href = "#Home";
+  let siblingLinks = [...menuItems].filter((child) => child != menuItems[0]);
   siblingLinks.forEach((element) => {
     element.children[0].classList.remove("active");
   });
