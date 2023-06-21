@@ -15,6 +15,7 @@ const menuBtn = document.querySelector("#menuBtn");
 const menuImage = document.querySelector(".hero__image");
 
 let href;
+let menuIndex;
 let menuTitle = "Home";
 
 /**
@@ -62,24 +63,31 @@ window.onscroll = function () {
     navbar.classList.add("nav__brand--shrink");
     menu.classList.remove("active");
     navLinks.style.display = "flex";
+    menuBtn.style.opacity = 0;
   } else {
     header.classList.remove("bg-dark", "box-shadow");
     navbar.classList.remove("nav__brand--shrink");
     menu.classList.add("active");
-    navLinks.style.display = "none";
-    // menuItems[0].children[0].classList.add("active");
-    // menuBtn.textContent = "Home";
-    // menuBtn.href = "#Home";
-    // let siblingLinks = [...menuItems].filter((child) => child != menuItems[0]);
-    // siblingLinks.forEach((element) => {
-    //   element.children[0].classList.remove("active");
-    // });
+    menuBtn.style.opacity = 1;
+    menuItems[0].children[0].classList.add("active");
+    menuBtn.textContent = "Home";
+    menuBtn.href = "#Home";
+    let siblingLinks = [...menuItems].filter((child) => child != menuItems[0]);
+    siblingLinks.forEach((element) => {
+      element.children[0].classList.remove("active");
+    });
   }
   if (window.scrollY == 0) {
-    location.href = "http://localhost:3000";
+    history.pushState(null, "JethCode.", "http://localhost:3000/");
   }
-  //  navHighlighter();
-  showFabButton();
+  if (
+    window.innerWidth < 992 ||
+    (window.innerWidth > 992 && window.scrollY > 80)
+  ) {
+    navLinks.style.display = "flex";
+  } else {
+    navLinks.style.display = "none";
+  }
 };
 
 /*********************************************************************************** */
@@ -95,23 +103,6 @@ navToggle.addEventListener("click", () => {
 navList.forEach((link) => {
   link.addEventListener("click", activeLink);
 });
-
-// navLink.forEach((link) => {
-//   link.addEventListener("click", () => {
-//     if (window.innerWidth > 768) {
-//       navbar.classList.remove("nav--open-menu");
-//       overlay.classList.remove("overlay");
-//     } else {
-//       toggleMenu();
-//     }
-
-//     link.classList.add("nav__link--active");
-//     let siblingLinks = [...navLink].filter((child) => child != link);
-//     siblingLinks.forEach((element) => {
-//       element.classList.remove("nav__link--active");
-//     });
-//   });
-// });
 
 toggler.onclick = () => {
   // console.log("clicked");
@@ -136,13 +127,19 @@ menuItems.forEach((menuItem) => {
     });
   });
   menuItem.children[0].addEventListener("click", (event) => {
-    console.log(menuTitle);
+    let index = [...menuItems].indexOf(menuItem);
 
     if (menuTitle == "Home") {
       return;
     } else {
       menu.classList.remove("active");
     }
+    navLinks.style.display = "flex";
+    navList[index].classList.add("nav__list--active");
+    let siblingLists = [...navList].filter((child) => child != navList[index]);
+    siblingLists.forEach((element) => {
+      element.classList.remove("nav__list--active");
+    });
   });
 });
 
@@ -194,15 +191,6 @@ function scrollToTop() {
   });
 }
 
-// When the user scrolls down 60px  from the top , shrink the navbar and show the scroll top button
-function showFabButton() {
-  // if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-  //   fabButton.style.display = "block";
-  // } else {
-  //   fabButton.style.display = "none";
-  // }
-}
-
 function resizeMenu() {
   let menuContainer = document.querySelector("#hero-menu-container");
   let width = menuContainer.offsetWidth;
@@ -218,7 +206,10 @@ function resizeMenu() {
     });
   }
 
-  if (window.innerWidth < 992) {
+  if (
+    window.innerWidth < 992 ||
+    (window.innerWidth > 992 && window.scrollY > 80)
+  ) {
     navLinks.style.display = "flex";
   } else {
     navLinks.style.display = "none";
