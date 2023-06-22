@@ -26,7 +26,6 @@ let menuTitle = "Home";
 
 // windows on load
 window.addEventListener("load", function (event) {
-  menu.classList.add("active");
   resizeMenu();
   // Animate Circular Menu when the page was loaded
   if (menu.classList.contains("active")) {
@@ -65,17 +64,7 @@ window.onscroll = function () {
     navLinks.style.display = "flex";
     menuBtn.style.opacity = 0;
   } else {
-    header.classList.remove("bg-dark", "box-shadow");
-    navbar.classList.remove("nav__brand--shrink");
-    menu.classList.add("active");
-    menuBtn.style.opacity = 1;
-    menuItems[0].children[0].classList.add("active");
-    menuBtn.textContent = "Home";
-    menuBtn.href = "#Home";
-    let siblingLinks = [...menuItems].filter((child) => child != menuItems[0]);
-    siblingLinks.forEach((element) => {
-      element.children[0].classList.remove("active");
-    });
+    reset();
   }
   if (window.scrollY == 0) {
     history.pushState(null, "JethCode.", "http://localhost:3000/");
@@ -121,25 +110,17 @@ menuItems.forEach((menuItem) => {
     menuBtn.textContent = menuTitle;
     menuBtn.href = href;
     menuItem.children[0].classList.add("active");
-    let siblingLinks = [...menuItems].filter((child) => child != menuItem);
-    siblingLinks.forEach((element) => {
-      element.children[0].classList.remove("active");
-    });
+    setLinkActiveClass(menuItems, "active", null, menuItem);
   });
   menuItem.children[0].addEventListener("click", (event) => {
-    let index = [...menuItems].indexOf(menuItem);
-
+    menuIndex = [...menuItems].indexOf(menuItem);
     if (menuTitle == "Home") {
       return;
     } else {
       menu.classList.remove("active");
     }
-    navLinks.style.display = "flex";
-    navList[index].classList.add("nav__list--active");
-    let siblingLists = [...navList].filter((child) => child != navList[index]);
-    siblingLists.forEach((element) => {
-      element.classList.remove("nav__list--active");
-    });
+    navList[menuIndex].classList.add("nav__list--active");
+    setLinkActiveClass(navList, "nav__list--active", menuIndex, null);
   });
 });
 
@@ -149,6 +130,12 @@ menuBtn.addEventListener("click", () => {
   } else {
     menu.classList.remove("active");
   }
+  let list = [...navList].filter(
+    (list) => list.children[0].href === menuBtn.href
+  )[0];
+  menuIndex = [...navList].indexOf(list);
+  navList[menuIndex].classList.add("nav__list--active");
+  setLinkActiveClass(navList, "nav__list--active", menuIndex, null);
 });
 
 /***************************************************************************************** */
@@ -179,19 +166,11 @@ function toggleMenu() {
 function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-  overlay.classList.remove("overlay");
-  navbar.classList.remove("nav--open-menu");
-  history.replaceState(null, "", location.origin);
-  menuItems[0].children[0].classList.add("active");
-  menuBtn.textContent = "Home";
-  menuBtn.href = "#Home";
-  let siblingLinks = [...menuItems].filter((child) => child != menuItems[0]);
-  siblingLinks.forEach((element) => {
-    element.children[0].classList.remove("active");
-  });
+  reset();
 }
 
 function resizeMenu() {
+  menu.classList.add("active");
   let menuContainer = document.querySelector("#hero-menu-container");
   let width = menuContainer.offsetWidth;
   if (width < 442) {
@@ -214,4 +193,32 @@ function resizeMenu() {
   } else {
     navLinks.style.display = "none";
   }
+}
+
+function setLinkActiveClass(classArray, activeClass, index, link) {
+  let siblingLinks = index
+    ? [...classArray].filter((child) => child != classArray[index])
+    : [...classArray].filter((child) => child != link);
+  if (link) {
+    siblingLinks.forEach((element) => {
+      element.children[0].classList.remove(activeClass);
+    });
+  } else {
+    siblingLinks.forEach((element) => {
+      element.classList.remove(activeClass);
+    });
+  }
+}
+
+function reset() {
+  header.classList.remove("bg-dark", "box-shadow");
+  navbar.classList.remove("nav__brand--shrink");
+  overlay.classList.remove("overlay");
+  navbar.classList.remove("nav--open-menu");
+  menu.classList.add("active");
+  menuBtn.style.opacity = 1;
+  menuItems[0].children[0].classList.add("active");
+  menuBtn.textContent = "Home";
+  menuBtn.href = "#Home";
+  setLinkActiveClass(menuItems, "active", null, menuItems[0]);
 }
