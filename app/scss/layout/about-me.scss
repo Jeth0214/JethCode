@@ -1,0 +1,36 @@
+@use "abstract" as *;
+
+.about {
+  .about__image {
+    img {
+      --b: 8px; /* border thickness*/
+      --s: 60px; /* size of the corner*/
+      --g: 14px; /* the gap*/
+
+      padding: calc(var(--b) + var(--g));
+      background-image: conic-gradient(
+          from 90deg at top var(--b) left var(--b),
+          #0000 25%,
+          $primary 0
+        ),
+        conic-gradient(
+          from -90deg at bottom var(--b) right var(--b),
+          #0000 25%,
+          $primary 0
+        );
+      background-position: var(--_p, 0%) var(--_p, 0%),
+        calc(100% - var(--_p, 0%)) calc(100% - var(--_p, 0%));
+      background-size: var(--s) var(--s);
+      background-repeat: no-repeat;
+    }
+  }
+  .about__description {
+    text-align: center;
+    font-size: clamp(1rem, 1.2rem, 1.8rem);
+    line-height: 2;
+
+    @include breakpoints-up("md") {
+      text-align: left;
+    }
+  }
+}

@@ -140,7 +140,10 @@
             </ul>
         </div>
         <!--  Cta Button-->
-        <button class="btn-primary text-white nav__cta hide-for-desktop">Download CV</button>
+        <button class="btn-primary text-white nav__cta hide-for-desktop">
+           <i class="fa-solid fa-file-arrow-down"></i>
+           Resume
+          </button>
       </nav>
     </header>
     <!-- End of Header -->
@@ -149,13 +152,21 @@
       <!-- Hero Section -->
       <section class="hero">
         <div class="container row">
-          <div class="hero__text text-light col-12-xs col-7-lg">
+          <div class="hero__text text-light col-12-xs col-7-lg  ">
+               <div class="hero__image--md text-center display-f justify-center align-center">
+              <img
+                class="br-full"
+                loading="lazy"
+                src="/assets/images/hero-section/Hero.png"
+                alt="Roland Jethro Suyom"
+              />
+            </div>
             <h1 class="hero__title h1">Hello! It's me Roland Jethro Suyom</h1>
             <h2 class="hero__position mt-2 mb-1">
               A Junior <span class="text-primary">Full Stack Developer</span>
             </h2>
             <div class="hero__description h4 mb-2">
-              <p>I love creating awesome websites.</p>
+              <p>Bringing your website ideas to life.</p>
               <p><span id="auto-type" class="text-primary fw-700"></span></p>
             </div>
             <div class="hero-cta">
@@ -165,7 +176,10 @@
             >
               Hire me
             </a>
-               <button class="btn-outline-primary text-white hide-for-medium">Download CV</button>
+               <button class="btn-outline-primary text-white hide-for-medium">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                Resume
+              </button>
             </div>
             
           </div>
@@ -254,73 +268,36 @@
       <!-- End of Hero Section -->
 
       <!-- About Me Section -->
-      <section id="About-me" class="container section text-dark-gray about-us">
-        <h2 class="h2 mb-3 text-center text-black">
-          <span class="header-underline">About Us</span>
+      <section id="About-me" class="container section text-dark-gray about mb-5">
+        <h2 class="h2 mb-5 text-center text-white">
+          <span class="header-underline">About Me</span>
         </h2>
         <div
-          class="row gap-3 justify-space-between align-start about-us__details"
+          class="row gap-3 justify-space-between about-us__details"
         >
-          <div class="col-12-sm col-5-md about-us__company border-line">
-            <h3 class="h3 text-black">Our Company</h3>
-            <p>
-              <span class="text-primary fw-bold">WeConstruct</span> is an
-              Engineering and Construction company situated in Wakanda, East
-              Africa.
-            </p>
-            <p class="mt-1 mb-1">
-              Our main focus is to render Building services varing from
-              Foundation, to Building Construction to Plumbling design,
-              Electrical Installations, Interior and Exterior finishes.
-            </p>
-            <p class="mt-1 mb-1">
-              We have a team of professionals who are skilled and experienced in
-              different engineerng related fields. We also offer Consultancy
-              services for contractors and fabricate locally made materials.
-            </p>
-            <p class="mb-1">
-              Our strength lirs in our versatility and genuine interesrt in
-              satisfying our clientsby utilizing locally sourced materials in a
-              cost effective manner.
-            </p>
+          <div class="col-12-sm col-4-md about__image hide-for-mobile">
+          <img src="/assets/images/hero-section/Hero.png" alt="Roland Jethro Suyom">
           </div>
-          <div class="col-12-sm col-5-md">
-            <div class="about-us__value">
-              <h3 class="h3 text-black">Our Core Value</h3>
-              <p class="mt-1 mb-2">
-                When choosing our core values, we consider practices that will
-                make our business sucessful and renowned. They include
-                happiness/passion ,education, innovation/creativity,
-                transparrency, excellent, giving back and safety.
-              </p>
-            </div>
-            <div class="about-us__mission mt-2">
-              <h3 class="h3 text-black">Our Mission</h3>
-              <p class="mt-1">
-                To provide innovative approaches to the construction engineering
-                industry in areas varying from materials selection, design and
-                specification, electrical wiring and installation, plumbing,
-                logistics, and to build effective relationship and deliver
-                excellent services to our clinents in a timelly and cost
-                effective manner.
-              </p>
-            </div>
+          <div class="col-12-sm col-7-md about__description" >
+           <p class="text-light">
+            I am a junior full-stack developer with 3 years of experience  looking for a new role in an exciting company.  I mostly use Angular for front-end, 
+            PHP / Laravel for back-end and Ionic for mobile developement,
+             and I can adapt to whatever tools are required. Currently based in Alkhobar, Saudi Arabia 
+             but I’m happy working remotely and have experience in remote teams. I’d love you to check out my works.
+            </p>
           </div>
         </div>
       </section>
       <!-- End of About Us section -->
 
-      <!-- Skills Section -->
+      <!-- Projects Section -->
       <section
-        id="Skills"
+        id="Projects"
         class="services container section text-center bg-light br pr-3 pl-3"
       >
-        <h2 class="h2"><span class="header-underline">Services</span></h2>
-        <p class="services__description mt-2 mb-3">
-          These are the services our business provides.
-        </p>
+        <h2 class="h2 mb-4"><span class="header-underline">Projects</span></h2>
         <div class="cards row gap-3 justify-center">
-          <div class="card col-12-sm col-4-md col-3-lg br p-3 service mb-2">
+          <div class="card col-12-sm col-5-md  br p-3 service mb-2">
             <div class="card__image service__image">
               <i class="fa-solid fa-people-arrows"></i>
               <span class="sr-only">people arrows icon</span>
@@ -333,7 +310,7 @@
               </p>
             </div>
           </div>
-          <div class="card col-12-sm col-4-md col-3-lg br p-3 service mb-2">
+          <div class="card col-12-sm col-5-md  br p-3 service mb-2">
             <div class="card__image service__image">
               <i class="fa-solid fa-screwdriver-wrench"></i>
               <span class="sr-only">screwdriver wrench icon</span>
@@ -347,7 +324,7 @@
             </div>
           </div>
 
-          <div class="card col-12-sm col-4-md col-3-lg br p-3 service mb-2">
+          <div class="card col-12-sm col-5-md  br p-3 service mb-2">
             <div class="card__image service__image">
               <i class="fa-solid fa-compass-drafting"></i>
               <span class="sr-only">compass drafting icon</span>
@@ -363,7 +340,7 @@
             </div>
           </div>
 
-          <div class="card col-12-sm col-4-md col-3-lg br p-3 service mb-2">
+          <div class="card col-12-sm col-5-md br p-3 service mb-2">
             <div class="card__image service__image">
               <i class="fa-sharp fa-solid fa-city"></i>
               <span class="sr-only">City icon</span>
@@ -376,38 +353,11 @@
               </p>
             </div>
           </div>
-          <div class="card col-12-sm col-4-md col-3-lg br p-3 service mb-2">
-            <div class="card__image service__image">
-              <i class="fa-solid fa-helmet-safety"></i>
-              <span class="sr-only">Saftey helmet icon</span>
-            </div>
-            <div class="card__body">
-              <h4 class="card__title text-primary mt-1">Installation</h4>
-              <p class="card__text">
-                Installation are Lorem ipsum dolor sit amet, consectetur
-                adipiscin roads.
-              </p>
-            </div>
-          </div>
-          <div class="card col-12-sm col-4-md col-3-lg br p-3 service mb-2">
-            <div class="card__image service__image">
-              <i class="fa-solid fa-people-roof"></i>
-              <span class="sr-only">People roof icon</span>
-            </div>
-            <div class="card__body">
-              <h4 class="card__title text-primary mt-1">Project Management</h4>
-              <p class="card__text">
-                Project Management are Lorem ipsum dolor sit amet, consectetur
-                adipiscin roads.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
-      <!-- End of services Section -->
-
-      <!-- Projects -->
-      <section id="Projects" class="container section text-center">
+      <!-- End of Projects Section -->
+       <!-- Skills -->
+      <!-- <section id="Skills" class="container section text-center">
         <h2 class="h2"><span class="header-underline">Our Projects</span></h2>
         <p class="mt-2 mb-3">
           These are some of our top Projects around the world.
@@ -499,11 +449,12 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End of project section -->
+    
 
       <!-- Testimonials -->
-      <section id="Testimonies" class="text-center mt-5 mb-5">
+      <!-- <section id="Testimonies" class="text-center mt-5 mb-5">
         <div class="testimonies container bg-light br section">
           <div class="pr-3 pl-3">
             <h2 class="h2">
@@ -740,7 +691,7 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- End of Testimonials -->
 
       <!-- Contact Me Section -->

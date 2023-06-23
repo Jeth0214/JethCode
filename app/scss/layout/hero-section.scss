@@ -18,6 +18,23 @@
     }
   }
 
+  .hero__image--md {
+    margin-top: 0;
+    @include breakpoints-up("md") {
+      margin-top: 80px;
+    }
+    @include breakpoints-up("lg") {
+      display: none;
+    }
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      border: 3px solid $primary;
+      filter: drop-shadow(-2px 8px 11px $primary);
+      background: #2c2c2c;
+      margin-bottom: 10px;
+    }
+  }
   .hero__text {
     text-align: center;
 

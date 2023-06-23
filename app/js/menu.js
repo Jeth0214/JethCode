@@ -52,10 +52,10 @@ window.addEventListener("resize", () => {
 //set scroll padding top dynamically when smooth scrolling
 document.documentElement.style.setProperty(
   "--scroll-padding",
-  +header.scrollY - 5 + "px"
+  header.offsetHeight + "px"
 );
 
-// add an event listener for scroll
+// add an event listener on scroll
 window.onscroll = function () {
   if (window.scrollY > 80 || navbar.classList.contains("nav--open-menu")) {
     header.classList.add("bg-dark", "box-shadow");
@@ -109,7 +109,7 @@ menuItems.forEach((menuItem) => {
     menuTitle = href.slice(1).replace("-", " ");
     menuBtn.textContent = menuTitle;
     menuBtn.href = href;
-    menuItem.children[0].classList.add("active");
+
     setLinkActiveClass(menuItems, "active", null, menuItem);
   });
   menuItem.children[0].addEventListener("click", (event) => {
@@ -119,7 +119,7 @@ menuItems.forEach((menuItem) => {
     } else {
       menu.classList.remove("active");
     }
-    navList[menuIndex].classList.add("nav__list--active");
+    // navList[menuIndex].classList.add("nav__list--active");
     setLinkActiveClass(navList, "nav__list--active", menuIndex, null);
   });
 });
@@ -134,7 +134,7 @@ menuBtn.addEventListener("click", () => {
     (list) => list.children[0].href === menuBtn.href
   )[0];
   menuIndex = [...navList].indexOf(list);
-  navList[menuIndex].classList.add("nav__list--active");
+  // navList[menuIndex].classList.add("nav__list--active");
   setLinkActiveClass(navList, "nav__list--active", menuIndex, null);
 });
 
@@ -169,6 +169,7 @@ function scrollToTop() {
   reset();
 }
 
+// element state change on resizing the viewport
 function resizeMenu() {
   menu.classList.add("active");
   let menuContainer = document.querySelector("#hero-menu-container");
@@ -195,21 +196,25 @@ function resizeMenu() {
   }
 }
 
+// set active classess to active
 function setLinkActiveClass(classArray, activeClass, index, link) {
   let siblingLinks = index
     ? [...classArray].filter((child) => child != classArray[index])
     : [...classArray].filter((child) => child != link);
   if (link) {
+    link.children[0].classList.add(activeClass);
     siblingLinks.forEach((element) => {
       element.children[0].classList.remove(activeClass);
     });
   } else {
+    navList[index].classList.add(activeClass);
     siblingLinks.forEach((element) => {
       element.classList.remove(activeClass);
     });
   }
 }
 
+// reset the element state
 function reset() {
   header.classList.remove("bg-dark", "box-shadow");
   navbar.classList.remove("nav__brand--shrink");
