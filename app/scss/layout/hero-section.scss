@@ -58,29 +58,30 @@
   }
 
   .hero-cta__about {
-    display: flex;
-    .hero-cta__hire-icons {
+    transition: background-color 0.5s ease-out;
+    &:hover {
+      background-color: rgba(216, 58, 52, 0.5);
+    }
+    .hero-cta__hire-arrows {
       position: relative;
       width: rem(56);
       height: rem(56);
-      background-color: rgba(216, 58, 52, 0.5);
       .arrow {
         height: 0.3rem;
         opacity: 0;
         position: absolute;
-        transform: scale(0.2);
+        transform: scale(0.1);
         width: 2rem;
         left: 15%;
-        top: -8px;
       }
       .arrow:nth-child(1) {
-        animation: move-arrow 3s linear 1s infinite;
+        animation: move-arrow 2s linear 1s infinite;
       }
       .arrow:nth-child(2) {
-        animation: move-arrow 3s linear 2s infinite;
+        animation: move-arrow 2s linear 2s infinite;
       }
       .arrow:nth-child(3) {
-        animation: move-arrow 3s linear 3s infinite;
+        animation: move-arrow 2s linear 3s infinite;
       }
       .arrow:before,
       .arrow:after {
@@ -113,12 +114,6 @@
           transform: translateY(3rem) scale(0.5);
         }
       }
-    }
-
-    span {
-      padding: rem(10);
-      font-size: rem(24);
-      background-color: $primary;
     }
   }
 }
