@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding-inline: 0 !important;
+  padding: rem(30) 0 !important;
 
   .nav__brand {
     .nav__brand-image {
@@ -263,6 +263,7 @@
 
 // style nav brand on scroll
 .nav__brand--shrink {
+  padding: rem(10) 0 !important;
   .nav__brand {
     .nav__brand-image {
       height: rem(30);

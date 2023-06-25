@@ -1,0 +1,10 @@
+@use "abstract" as *;
+
+.contact-me {
+  .contact__profile-link {
+    transition: all 0.3s ease-in;
+    &:hover {
+      scale: 1.2;
+    }
+  }
+}

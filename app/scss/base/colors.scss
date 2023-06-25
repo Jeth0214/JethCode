@@ -1,30 +1,26 @@
-@use 'abstract' as *;
+@use "abstract" as *;
 
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value;
+  }
 
+  .bg-#{$key} {
+    background-color: $value;
+  }
 
-@each $key ,
-$value in $colors {
-    .text-#{$key} {
-        color: $value
+  .text-hover-#{$key} {
+    transition: color 0.3s ease-in;
+    &:hover {
+      color: lighten($value, 30%);
     }
+  }
 
-    .bg-#{$key} {
-        background-color: $value ;
-    }
+  .border-#{$key} {
+    border: $base-border-thickness solid 1px $value;
+  }
 
-    ;
-
-    .text-hover-#{$key} {
-        &:hover {
-            color: lighten($value, 30%);
-        }
-    }
-
-    .border-#{$key} {
-        border: $base-border-thickness solid 1px $value;
-    }
-
-    .outline-#{$key} {
-        outline: $base-border-thickness solid 1px $value;
-    }
+  .outline-#{$key} {
+    outline: $base-border-thickness solid 1px $value;
+  }
 }
