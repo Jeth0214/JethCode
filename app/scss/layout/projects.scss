@@ -4,22 +4,22 @@
     transition: all 0.3s ease-in-out;
     &:nth-child(1) {
       .card {
-        background-image: url("./assets/images/projects/we-construct.png");
+        background-image: url("../assets/images/projects/we-construct.png");
       }
     }
     &:nth-child(2) {
       .card {
-        background-image: url("./assets/images/projects/search-country.jpg");
+        background-image: url("../assets/images/projects/search-country.jpg");
       }
     }
     &:nth-child(3) {
       .card {
-        background-image: url("./assets/images/projects/invoice-app.jpg");
+        background-image: url("../assets/images/projects/invoice-app.jpg");
       }
     }
     &:nth-child(4) {
       .card {
-        background-image: url("./assets/images/projects/barcode-finder.png");
+        background-image: url("../assets/images/projects/barcode-finder.png");
         background-size: 80%;
       }
     }
