@@ -2,10 +2,14 @@
 
 .about {
   .about__image {
+    display: none;
+    @include breakpoints-up("lg") {
+      display: block;
+    }
     img {
-      --b: 8px; /* border thickness*/
-      --s: 60px; /* size of the corner*/
-      --g: 14px; /* the gap*/
+      --b: 8px;
+      --s: 60px;
+      --g: 5px;
 
       padding: calc(var(--b) + var(--g));
       background-image: conic-gradient(

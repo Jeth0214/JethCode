@@ -48,7 +48,7 @@
         <div class="nav__brand">
           <a href="/">
             <img
-              src="/assets/images/hero-section/jethcode.png"
+              src="./assets/images/hero-section/jethcode.png"
               class="nav__brand-name"
             />
           </a>
@@ -99,7 +99,7 @@
                   
                 </a>
               </li>
-              <li  class="nav__list">
+              <li  class="nav__list hide-for-mobile">
                 <a
                   class="nav__link"
                   href="#Skills"
@@ -112,7 +112,7 @@
                 <span class="nav__link-text">Skills</span>
                 </a>
               </li>
-              <li  class="nav__list hide-for-mobile">
+              <li  class="nav__list ">
                 <a
                   class="nav__link"
                   href="#Testimonies"
@@ -140,10 +140,10 @@
             </ul>
         </div>
         <!--  Cta Button-->
-        <button class="btn-primary text-white nav__cta hide-for-desktop">
+        <a href="./assets/Resume.pdf" download="Roland-Jethro-Suyom.pdf" class="btn-primary text-white nav__cta hide-for-desktop ">
            <i class="fa-solid fa-file-arrow-down"></i>
-           Resume
-          </button>
+          <span >Resume</span> 
+          </a>
       </nav>
     </header>
     <!-- End of Header -->
@@ -151,13 +151,13 @@
     <main class="main">
       <!-- Hero Section -->
       <section class="hero">
-        <div class="container row">
+        <div class="container row  hero-w">
           <div class="hero__text text-light col-12-xs col-7-lg  ">
                <div class="hero__image--md text-center display-f justify-center align-center">
               <img
                 class="br-full"
                 loading="lazy"
-                src="/assets/images/hero-section/Hero.png"
+                src="./assets/images/hero-section/Hero.png"
                 alt="Roland Jethro Suyom"
               />
             </div>
@@ -174,7 +174,7 @@
                 <a
                 href="#About-me"
                 class=" text-white hero-cta__about display-f align-center bg-primary br-sm mr-3">
-                <span class="pl-1">About me</span>
+                <span class="pl-2">About me</span>
                 <div  class="hero-cta__hire-arrows">
                   <div class="arrow"></div>
                   <div class="arrow"></div>
@@ -182,11 +182,12 @@
                 </div>
                 
               </a>
-
-               <button class="btn-outline-primary text-white hide-for-medium pl-3 pr-3">
-                <i class="fa-solid fa-file-arrow-down"></i>
-                Resume
-              </button>
+              <div class="hide-for-medium">
+                <a href="./assets/Resume.pdf" download="Roland-Jethro-Suyom.pdf" class="btn-outline-primary text-white  p-2 gap-1 display-f justify-center align-center">
+                 <i class="fa-solid fa-file-arrow-down"></i>
+                 Resume
+               </a>
+              </div>
             </div>
             
           </div>
@@ -282,10 +283,10 @@
         <div
           class="row gap-3 justify-space-between about-us__details"
         >
-          <div class="col-12-sm col-4-md about__image hide-for-mobile">
-          <img src="/assets/images/hero-section/Hero.png" alt="Roland Jethro Suyom">
+          <div class="col-12-sm col-4-lg about__image">
+          <img src="./assets/images/About/about1.jpg" alt="Roland Jethro Suyom">
           </div>
-          <div class="col-12-sm col-7-md about__description" >
+          <div class="col-12-sm col-7-lg about__description" >
            <p class="text-light">
             I am a junior full-stack developer with 3 years of experience  looking for a new role in an exciting company.  I mostly use Angular for front-end, 
             PHP / Laravel for back-end and Ionic for mobile developement,
@@ -424,7 +425,7 @@
       <section id="Skills" class="section text-center text-light bg-dark skills">
           <h2 class="h2 mb-4"><span class="header-underline">Skills</span></h2>
           <div class=" row container justify-center ">
-              <div class="col-12-xs col-3-md mb-2 skill border-primary text-left p-2">
+              <div class="col-12-xs col-6-md col-3-lg mb-2 skill border-primary text-left p-2">
                 <h3 class="h3"> Frontend </h3>
                 <ul class="text-">
                   <li class="h3">
@@ -457,7 +458,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-12-xs col-3-md mb-2 skill border-primary text-left p-2">
+              <div class="col-12-xs col-6-md col-3-lg mb-2 skill border-primary text-left p-2">
                 <h3 class="h3"> Backend </h3>
                 <ul class="text-">
                   <li class="h3">
@@ -482,7 +483,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-12-xs col-3-md mb-2 skill border-primary text-left p-2">
+              <div class="col-12-xs col-6-md col-3-lg mb-2 skill border-primary text-left p-2">
                 <h3 class="h3"> Mobile </h3>
                 <ul class="text-">
                   <li class="h3">
@@ -499,7 +500,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-12-xs col-3-md mb-2 skill border-primary text-left p-2">
+              <div class="col-12-xs col-6-md col-3-lg mb-2 skill border-primary text-left p-2">
                 <h3 class="h3"> Others</h3>
                 <ul class="text-">
                   <li class="h3">
@@ -723,36 +724,16 @@
           <p>I will reply as soon as possible.</p>
         </section>
 
-        <div class="text-center">
-          <h2 class="h2 text-light"><span class="header-underline">Get in Touch</span></h2>
-        </div>
+        
         <div class="row gap-4 justify-space-between mt-4 ">
           <div class="col-5-md col-12-xs">
-            <div class="contact__message hide-for-mobile">
+            <h2 class="h2 text-light mb-3"><span class="header-underline">Get in Touch</span></h2>
+            <div class="contact__message">
               <h4 class="h4 text-white">
                 I’d love to hear about what you’re working on and how I could help. 
                  Please do feel free to check out my online profiles below and get in touch using the form.
               </h4>
-
-              <div class="contact__profiles display-f gap-2 mt-5 ">
-                <a class="contact__profile-link h2 text-primary text-hover-primary" href="https://www.facebook.com/" target="_blank">
-                    <i class="fa-brands fa-facebook"></i>
-                    <span class="sr-only">link to facebook website</span>
-                </a>
-                <a class="contact__profile-link h2 text-primary text-hover-primary" href="https://www.linkedin.com/" target="_blank">
-                    <i class="fa-brands fa-linkedin"></i>
-                    <span class="sr-only">link to linkedin website</span>
-                </a>
-                <a class="contact__profile-link h2 text-primary text-hover-primary" href="https://www.youtube.com/" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
-                    <span class="sr-only">link to youtube website</span>
-                </a>
-                <a class="contact__profile-link h2 text-primary text-hover-primary" href="https://www.youtube.com/" target="_blank">
-                    <i class="fa-brands fa-youtube"></i>
-                    <span class="sr-only">link to youtube website</span>
-                </a>
-                
-              </div>
+             
             </div>
           </div>
           <div class="contact__form col-12-xs col-5-md text-light">
@@ -796,7 +777,7 @@
                   name="message"
                   id="message"
                   cols="30"
-                  rows="10"
+                  rows="5"
                   placeholder=" How can I help?"
                 ></textarea>
                 <small class="text-error"></small>
@@ -817,9 +798,36 @@
     </main>
     <!-- End of Main Section -->
 
-    <footer class="footer bg-dark text-white pt-5 pb-5">
+    <footer class="footer bg-dark text-white pt-3 pb-3">
         <div class="container">
-          
+          <div class="display-f gap-1 align-center justify-space-between footer__about">
+              
+                 <div class="contact__profiles display-f gap-2">
+                <a class="contact__profile-link h2 text-primary text-hover-primary" href="https://www.linkedin.com/in/roland-jethro-suyom-198a89207/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span class="sr-only">link to linkedin website</span>
+                </a>
+                <a class="contact__profile-link h2 text-primary text-hover-primary" href="mailto:rolandjethrosuyom@yahoo.com" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="sr-only">link to email</span>
+                </a>
+                <a class="contact__profile-link h2 text-primary text-hover-primary" href="https://github.com/Jeth0214" target="_blank">
+                    <i class="fa-brands fa-square-github"></i>
+                    <span class="sr-only">link to github website</span>
+                </a>
+                <a class="contact__profile-link h2 text-primary text-hover-primary" href="https://twitter.com/JethroSuyom" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                    <span class="sr-only">link to twitter website</span>
+                </a>
+                
+              </div>
+                <div class="">
+                  <a href="/" class="display-f footer__brand align-center">
+                      <img loading="lazy" src="./assets/images/hero-section/jethcode.png"
+                          alt="WeConstruct" class="footer__brand-image">
+                  </a>
+                </div>
+            </div>
         </div>
     </footer>
 

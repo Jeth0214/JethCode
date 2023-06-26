@@ -50,4 +50,9 @@
     opacity: 1;
     background-color: darken($primary, 5%);
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $primary;
+  }
 }

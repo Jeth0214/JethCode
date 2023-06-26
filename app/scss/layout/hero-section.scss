@@ -1,13 +1,13 @@
 @use "abstract" as *;
 
 .hero {
-  //min-height: rem(668);
-  min-height: 100vh;
+  min-height: rem(668);
+  // min-height: 100vh;
   min-height: 100dvh;
-  //height: 100%;
+  height: 100%;
   display: flex;
   justify-content: flex-end;
-  background: url(/assets/images/hero-section/background-stars.svg);
+  background: url(./assets/images/hero-section/background-stars.svg);
   background-color: $black;
   align-items: center;
   .hero-cta {
@@ -19,9 +19,9 @@
   }
 
   .hero__image--md {
-    margin-top: 0;
+    margin-top: rem(20);
     @include breakpoints-up("md") {
-      margin-top: rem(80);
+      margin-top: rem(120);
     }
     @include breakpoints-up("lg") {
       display: none;

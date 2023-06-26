@@ -6,7 +6,7 @@ const navLinks = document.querySelector(".nav__links");
 const navList = document.querySelectorAll(".nav__list");
 const overlay = document.querySelector("#overlay");
 const sections = document.querySelectorAll("section");
-const fabButton = document.querySelector(".fab-button");
+const aboutBtn = document.querySelector(".hero-cta__about");
 // Circular menu
 const menu = document.querySelector(".menu");
 const toggler = document.querySelector(".menu--hero__toggle");
@@ -97,6 +97,10 @@ toggler.onclick = () => {
   // console.log("clicked");
   menu.classList.toggle("active");
 };
+
+aboutBtn.addEventListener("click", () => {
+  setLinkActiveClass(navList, "nav__list--active", 1, null);
+});
 
 /********************************************************************************** */
 
