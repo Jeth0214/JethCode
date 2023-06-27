@@ -17,6 +17,10 @@
         padding: 30px 20px 10px;
         position: relative;
         border-radius: rem(10);
+        min-height: rem(210);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         p {
           position: relative;
@@ -41,7 +45,7 @@
 
       .testimonies__client {
         position: relative;
-        margin-top: -13px;
+        margin-top: -8px;
         display: flex;
         gap: rem(10);
         align-items: center;
