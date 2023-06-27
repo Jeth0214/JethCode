@@ -1,6 +1,14 @@
 @use "abstract" as *;
 
 .contact-me {
+  .contact__message {
+    text-align: center;
+    margin-bottom: rem(20);
+    @include breakpoints-up("md") {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
   .contact__profile-link {
     transition: all 0.3s ease-in;
     &:hover {

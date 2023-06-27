@@ -178,6 +178,7 @@ function resizeMenu() {
   menu.classList.add("active");
   let menuContainer = document.querySelector("#hero-menu-container");
   let width = menuContainer.offsetWidth;
+
   if (width < 442) {
     menuItems.forEach((menu) => {
       menu.style.transformOrigin = width / 2 + 22 + "px";
