@@ -178,17 +178,24 @@ function resizeMenu() {
   menu.classList.add("active");
   let menuContainer = document.querySelector("#hero-menu-container");
   let width = menuContainer.offsetWidth;
+  menuImage.style.zIndex = 1000;
 
   if (width < 442) {
     menuItems.forEach((menu) => {
       menu.style.transformOrigin = width / 2 + 22 + "px";
       menu.style.left = width - (width + 25) + "px";
+      menu.style.zIndex = 2;
     });
   } else {
     menuItems.forEach((menu) => {
       menu.style.transformOrigin = 220 + "px";
       menu.style.left = 0 + "px";
+      menu.style.zIndex = 2;
     });
+
+    setTimeout(() => {
+      menuImage.style.zIndex = 1;
+    }, 1200);
   }
 
   if (
@@ -230,5 +237,6 @@ function reset() {
   menuItems[0].children[0].classList.add("active");
   menuBtn.textContent = "Home";
   menuBtn.href = "#Home";
+  resizeMenu();
   setLinkActiveClass(menuItems, "active", null, menuItems[0]);
 }

@@ -61,7 +61,6 @@ const validate = (formControl) => {
       formControl.nextElementSibling.innerHTML = "";
       errorMessage += formControl.nextElementSibling.innerHTML;
     } else {
-      alert("Not a valid form control");
       formControl.classList.add("form__error");
       formControl.nextElementSibling.innerHTML =
         "Please use a valid email address";
