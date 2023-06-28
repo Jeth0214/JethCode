@@ -67,7 +67,7 @@ window.onscroll = function () {
     reset();
   }
   if (window.scrollY == 0) {
-    history.pushState(null, "JethCode.", "http://localhost:3000/");
+    history.pushState(null, "JethCode.", window.location.origin);
   }
   if (
     window.innerWidth < 992 ||
