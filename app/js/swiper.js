@@ -16,15 +16,10 @@ let swiper = new Swiper(".testimonials ", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-      slidesPerGroup: 2,
-    },
     960: {
       spaceBetween: 60,
-      slidesPerView: 2,
-      slidesPerGroup: 2,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
     },
   },
 });
