@@ -1,7 +1,7 @@
 // swiper configurations
 let swiper = new Swiper(".testimonials ", {
   slidesPerView: 1,
-  spaceBetween: 35,
+  spaceBetween: 60,
   slidesPerGroup: 1,
   grabCursor: true,
   centerSlide: true,
