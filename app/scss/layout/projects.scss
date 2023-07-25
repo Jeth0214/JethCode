@@ -78,6 +78,9 @@
         font-size: rem(20);
         border-radius: 50%;
         color: $light;
+        p {
+          font-size: rem(16);
+        }
       }
     }
   }
