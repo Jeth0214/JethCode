@@ -21,7 +21,7 @@ let menuTitle = "Home";
 /**
  * Global
  * Windows
- * Doucument
+ * Document
  */
 
 // windows on load
@@ -31,6 +31,7 @@ window.addEventListener("load", function (event) {
   if (menu.classList.contains("active")) {
     setTimeout(() => {
       menuBtn.classList.remove("display-n");
+      menuBtn.classList.add("display-i-b");
       menuItems[0].children[0].classList.add("active");
     }, 500);
   }
@@ -188,7 +189,7 @@ function resizeMenu() {
     });
   } else {
     menuItems.forEach((menu) => {
-      menu.style.transformOrigin = 220 + "px";
+      menu.style.transformOrigin = 230 + "px";
       menu.style.left = 0 + "px";
       menu.style.zIndex = 2;
     });
